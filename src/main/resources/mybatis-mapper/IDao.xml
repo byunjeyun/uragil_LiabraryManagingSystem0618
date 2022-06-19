@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org/DTD Mapper 3.0/EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.uragil.LMS.dao.IDao">
+
+	<insert id="joinDao">
+		INSERT INTO b_member (mid, mpw, mname, mphone)VALUES(#{param1},#{param2},#{param3},#{param4})
+	</insert>
+
+
+	<select id="checkIdDao" resultType="int">
+		SELECT COUNT(*) FROM b_member WHERE mid = #{param1}
+	</select>
+
+	<select id="checkPwDao" resultType="int">
+		SELECT COUNT(*) FROM b_member WHERE mid = #{param1} AND mpw = #{param2}
+	</select>
+
+	<select id="loginInfoDao" resultType="com.uragil.LMS.dto.MemberDto">
+		SELECT * FROM b_member WHERE mid = #{param1}
+	</select>
+
+
+
+</mapper>
