@@ -105,6 +105,29 @@ public class WebController {
 	}
 	
 	
+	@RequestMapping(value="/book_input")
+	public String book_input() {
+		
+		return "book_input";
+	}
+	
+	
+	@RequestMapping(value ="/b_inputOk", method=RequestMethod.POST)
+	public String b_inputOk(HttpServletRequest request, Model model) {
+		String bcode = request.getParameter("bcode");
+		String bname = request.getParameter("bname");
+		String bcategori = request.getParameter("bcategori");
+		String bwriter = request.getParameter("writer");
+		String bstate = request.getParameter("bstate");
+						
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+			dao.b_inputDao(bcode, bname, bcategori, bwriter, bstate);
+			
+		return "br_inputOk";
+	}
+	
+	
 	@RequestMapping(value ="/br_list")
 	public String br_list(Model model) {
 		
@@ -117,6 +140,27 @@ public class WebController {
 		return "br_list";
 	}
 	
+	
+	@RequestMapping(value="/br_input")
+	public String br_input() {
+		
+		return "br_input";
+	}
+	
+	
+	@RequestMapping(value ="/br_inputOk", method=RequestMethod.POST)
+	public String br_inputOk(HttpServletRequest request, Model model) {
+		String brcode = request.getParameter("brcode");
+		String brbcode = request.getParameter("brbcode");
+		String brmid = request.getParameter("brmid");
+		String bstate = request.getParameter("bstate");
+						
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+			dao.br_inputDao(brcode, brbcode, brmid, bstate);
+			
+		return "br_inputOk";
+	}
 }
 	
 

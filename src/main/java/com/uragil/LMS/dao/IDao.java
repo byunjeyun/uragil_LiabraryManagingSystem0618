@@ -22,9 +22,10 @@ public interface IDao {
 
 	//bookDao
 	public ArrayList<BookDto> b_listDao();//리스트 가져오기
+	public void b_inputDao(String bcode, String bname, String bcategori, String bwriter, String bstate);
 	
 	
 	//brDao
 	public ArrayList<BorrowDto> br_listDao();//리스트 가져오기
-	
+	public void br_inputDao(String brcode, String brbcode, String brmid, String bstate);
 }
