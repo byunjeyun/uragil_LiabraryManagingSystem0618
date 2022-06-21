@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.uragil.LMS.dao.IDao;
 import com.uragil.LMS.dto.BookDto;
+import com.uragil.LMS.dto.BorrowDto;
 
 
 
@@ -96,14 +97,25 @@ public class WebController {
 		
 		IDao dao = sqlSession.getMapper(IDao.class);
 		
-		ArrayList<BookDto> bookDtos = dao.listDao();
+		ArrayList<BookDto> bDtos = dao.b_listDao();
 		
-		model.addAttribute("blist", bookDtos);
+		model.addAttribute("b_list", bDtos);
 		
 		return "b_list";
 	}
 	
-
+	
+	@RequestMapping(value ="/br_list")
+	public String br_list(Model model) {
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		ArrayList<BorrowDto> brDtos = dao.br_listDao();
+		
+		model.addAttribute("br_list", brDtos);
+		
+		return "br_list";
+	}
 	
 }
 	

@@ -3,6 +3,7 @@ package com.uragil.LMS.dao;
 import java.util.ArrayList;
 
 import com.uragil.LMS.dto.BookDto;
+import com.uragil.LMS.dto.BorrowDto;
 import com.uragil.LMS.dto.MemberDto;
 
 
@@ -20,7 +21,10 @@ public interface IDao {
 
 
 	//bookDao
-	public ArrayList<BookDto> listDao();//리스트 가져오기
+	public ArrayList<BookDto> b_listDao();//리스트 가져오기
 	
+	
+	//brDao
+	public ArrayList<BorrowDto> br_listDao();//리스트 가져오기
 	
 }
