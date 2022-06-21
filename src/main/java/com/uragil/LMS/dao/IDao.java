@@ -1,6 +1,10 @@
 package com.uragil.LMS.dao;
 
+import java.util.ArrayList;
+
+import com.uragil.LMS.dto.BookDto;
 import com.uragil.LMS.dto.MemberDto;
+
 
 public interface IDao {
 	
@@ -12,4 +16,11 @@ public interface IDao {
 	public int checkPwDao(String mid, String mpw);
 
 	public MemberDto loginInfoDao(String mid);
+
+
+
+	//bookDao
+	public ArrayList<BookDto> listDao();//리스트 가져오기
+	
+	
 }

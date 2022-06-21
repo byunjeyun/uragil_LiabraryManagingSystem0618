@@ -25,4 +25,9 @@
 
 
 
+
+	<select id="listDao" resultType="com.uragil.LMS.dto.BookDto">
+		SELECT * FROM b_book ORDER BY bcode DESC	
+	</select>
+
 </mapper>
