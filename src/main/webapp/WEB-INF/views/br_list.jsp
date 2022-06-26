@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<<<<<<< HEAD
+
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/menu.css?after">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/board.css?after">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/header.css?after">
@@ -76,64 +76,6 @@
 								<input class="button05"type="button" value="홈으로" onclick="location.href='index'">
 							</td>
 						</tr>						
-=======
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-
-<%@ include file="include/header.jsp" %>
-
-	<center>	
-	<table width="70%" border="0" cellspacing="0" cellpadding="10">
-		<tr>
-			<td align="center"></td>
-		</tr>
-		<tr>
-			<td align="center" height=""></td>
-		</tr>
-					<table border="0" cellspacing="0" cellpadding="10">
-							<tr>
-								<td >대출코드</td>
-								<td >도서코드</td>
-								<td >회원ID</td>
-								<td >대출일</td>
-								<td >반납예정일</td>
-								<td >반납상태</td>
-							</tr>
-							<c:forEach items="${br_list }" var="brdto">
-							<tr>
-								<td >${brdto.brcode }</td>
-								<td >${brdto.fk_bcode }</td>
-								<td >
-									<c:choose>
-										<c:when test="${fn:length(brdto.fk_mid) > 28}">
-											<c:out value="${fn:substring(brdto.fk_mid,0,27) }" /> ......
-										</c:when> 
-										<c:otherwise>
-											<c:out value="${brdto.mid}" />
-										</c:otherwise>
-									</c:choose>
-								</a>
-								</td>
-								<td >${brdto.brsdate }</td>
-								<td >
-									<c:out value="${fn:substring(brdto.brsdate,0,16) }" /> 
-								</td>
-								<td >${brdto.brrdate }</td>
-								<td >
-									<c:out value="${fn:substring(brdto.brrdate,0,16) }" /> 
-								</td>
-								
-								
-							</tr>
-							</c:forEach>
-							<tr>
-								<td colspan="5" align="right">
-									<input type="button" class="button01" value="질문하기" onclick="location.href='question'">
-							</td>
-						</tr>					
->>>>>>> refs/remotes/origin/master
 					</table>
 				</form>
 			

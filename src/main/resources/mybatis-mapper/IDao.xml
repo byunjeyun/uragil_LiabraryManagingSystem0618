@@ -28,7 +28,7 @@
 
 
 
-<<<<<<< HEAD
+
 <!-- book SQL -->
 	<select id="b_listDao" resultType="com.uragil.LMS.dto.BookDto">
 		SELECT * FROM b_book
@@ -73,30 +73,14 @@
 		INSERT INTO b_borrow(brcode, brbcode, brmid) VALUES(b_borrow_seq.nextval, #{param1}, #{param2})
 	</insert>
 
-</mapper>
-=======
+
 
 	<select id="b_listDao" resultType="com.uragil.LMS.dto.BookDto">
 		SELECT * FROM b_book ORDER BY bcode DESC	
 	</select>
 	
-	<insert id="b_inputDao">
-		INSERT INTO b_book (bcode, bname, bcategori, bwriter)VALUES(#{param1},#{param2},#{param3},#{param4})
-	</insert>
 	
-
-	
-	
-	
-	
-	<select id="br_listDao" resultType="com.uragil.LMS.dto.BrrowDto">
-		SELECT * FROM b_borrow ORDER BY brcode DESC	
-	</select>
-	
-	<insert id="br_inputDao">
-		INSERT INTO b_borrow (brcode, fk_bcode, fk_mid, bstate)VALUES(#{param1},#{param2},#{param3},#{param4})
-	</insert>
-	
-
 </mapper>
->>>>>>> refs/remotes/origin/master
+
+
+
