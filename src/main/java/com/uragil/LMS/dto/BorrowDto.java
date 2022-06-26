@@ -6,21 +6,21 @@ public class BorrowDto {
 	private int brcode;
 	private String sdate;
 	private String rdate;
-	private String fk_bcode;
-	private String fk_mid;
-	private String brstate;
+	private String brbcode;
+	private String brmid;
+	private String bstate;
 	public BorrowDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public BorrowDto(int brcode, String sdate, String rdate, String fk_bcode, String fk_mid, String brstate) {
+	public BorrowDto(int brcode, String sdate, String rdate, String brbcode, String brmid, String bstate) {
 		super();
 		this.brcode = brcode;
 		this.sdate = sdate;
 		this.rdate = rdate;
-		this.fk_bcode = fk_bcode;
-		this.fk_mid = fk_mid;
-		this.brstate = brstate;
+		this.brbcode = brbcode;
+		this.brmid = brmid;
+		this.bstate = bstate;
 	}
 	public int getBrcode() {
 		return brcode;
@@ -40,23 +40,23 @@ public class BorrowDto {
 	public void setRdate(String rdate) {
 		this.rdate = rdate;
 	}
-	public String getFk_bcode() {
-		return fk_bcode;
+	public String getBrbcode() {
+		return brbcode;
 	}
-	public void setFk_bcode(String fk_bcode) {
-		this.fk_bcode = fk_bcode;
+	public void setBrbcode(String brbcode) {
+		this.brbcode = brbcode;
 	}
-	public String getFk_mid() {
-		return fk_mid;
+	public String getBrmid() {
+		return brmid;
 	}
-	public void setFk_mid(String fk_mid) {
-		this.fk_mid = fk_mid;
+	public void setBrmid(String brmid) {
+		this.brmid = brmid;
 	}
-	public String getBrstate() {
-		return brstate;
+	public String getBstate() {
+		return bstate;
 	}
-	public void setBrstate(String brstate) {
-		this.brstate = brstate;
+	public void setBstate(String bstate) {
+		this.bstate = bstate;
 	}
 	
 	

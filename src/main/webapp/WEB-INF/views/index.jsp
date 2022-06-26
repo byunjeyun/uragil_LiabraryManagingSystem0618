@@ -4,6 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/content.css?after">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/main.css?after">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/member.css?after">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/header.css?after">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/board.css?after">
 <title>Insert title here</title>
 </head>
 
@@ -15,25 +21,32 @@
 		<tr height="530">
 			<td bgcolor="#bbbbbb" align="center" height="500">
 			
-	<table bgcolor="#338888" height="120" width="400" cellspacing="10px">
+	<table bgcolor="#112" height="120" width="400" cellspacing="10px">
+		
+			<tr align="center">
+				<td class="board01" colspan="2" >
+				<span class="content05">Uragil 도서관리시스템</span><br><br>
+				</td>
+			</tr>
+		
 		
 		<tr>
-			<td class=""   align="center">1. <a href="/">도서정보 입력</a></td>
+			<td class=""align="center"> <a href="book_input">1.도서정보 입력</a></td>
 		</tr>
 		
 		<tr>
-			<td >2. <a href="">도서정보 열람</a><td>
+			<td    align="center"> <a href="book_list">2. 도서정보 열람</a><td>
 		</tr>
 		<tr>
-			<td class="">3. <a href="/">대출정보 입력</a></td>
-		</tr>
-		
-		<tr>
-			<td >4. <a href="">대출정보 열람</a><td>
+			<td class=""align="center"> <a href="br_input">3. 대출정보 입력</a></td>
 		</tr>
 		
 		<tr>
-			<td class="">5. <a href="">회원정보 열람</a></td>
+			<td   align="center"> <a href="br_list">4. 대출정보 열람</a><td>
+		</tr>
+		
+		<tr>
+			<td class=""align="center"> <a href="">5. 회원정보 열람</a></td>
 		</tr>
 	</table>
 			</td>

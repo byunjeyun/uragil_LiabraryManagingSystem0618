@@ -1,5 +1,7 @@
 package com.uragil.LMS;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -11,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.uragil.LMS.dao.IDao;
+import com.uragil.LMS.dto.BookDto;
+import com.uragil.LMS.dto.BorrowDto;
+import com.uragil.LMS.dto.MemberDto;
 
 
 
@@ -78,6 +83,39 @@ public class WebController {
 		return "joinOk";
 	}
 	
+	
+	@RequestMapping(value = "/loginOk", method=RequestMethod.POST)
+	public String loginOk(HttpServletRequest request, Model model) {
+		
+		String mid = request.getParameter("mid");
+		String mpw = request.getParameter("mpw");
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		int checkId = dao.checkIdDao(mid);
+		int checkPw = dao.checkPwDao(mid, mpw);
+		
+		model.addAttribute("checkId", checkId);
+		model.addAttribute("checkPw", checkPw);
+		
+		
+						
+		if (checkPw == 1) {
+							
+			MemberDto memberDto = dao.loginInfoDao(mid);
+			HttpSession session = request.getSession();
+			
+			session.setAttribute("id", memberDto.getMid());
+			session.setAttribute("name", memberDto.getMname());
+			
+			model.addAttribute("mid", memberDto.getMid());
+			model.addAttribute("mname", memberDto.getMname());
+			}
+			
+				
+		return "loginOk";
+	}
+	
 	@RequestMapping(value = "/logout")
 	public String logout(HttpSession session) {
 		
@@ -86,6 +124,120 @@ public class WebController {
 		return "login";
 				
 	}
+	
+	@RequestMapping(value ="/book_list")
+	public String book_list(HttpServletRequest request,  Model model) {
+		
+		String searchKeyword = request.getParameter("searchKeyword");
+		String searchOption = request.getParameter("searchOption");
+		System.out.println(searchKeyword);		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		
+		
+		
+		ArrayList<BookDto> bDtos = null;
+		ArrayList<BorrowDto> brDtos = null;
+		if(searchOption == null || searchKeyword == null) {
+			bDtos = dao.b_listDao();
+			brDtos = dao.br_listDao();
+		} else {
+			if(searchOption.equals("title")) {
+				//제목 특정 키워드 검색한 결과
+				bDtos = dao.TitleSearchlistDao(searchKeyword);
+			} else if(searchOption.equals("categori") ) {
+				//장르 특정 키워드 검색한 결과
+				bDtos = dao.CategoriSearchlistDao(searchKeyword);
+			} else {
+				//글쓴이에서 특정 키워드 검색한 결과
+				bDtos = dao.WriterSearchlistDao(searchKeyword);
+			}
+		
+		}
+				
+		
+		
+		model.addAttribute("b_list", bDtos);
+		model.addAttribute("br_list", brDtos);
+
+		return "book_list";
+		
+		
+	}
+	
+	
+	@RequestMapping(value="/book_input")
+	public String book_input() {
+		
+		return "book_input";
+	}
+	
+	
+	@RequestMapping(value ="/book_inputOk")
+	public String b_inputOk(HttpServletRequest request, Model model) {
+		
+		String bname = request.getParameter("bname");
+		String bcategori = request.getParameter("bcategori");
+		String bwriter = request.getParameter("bwriter");
+		
+						
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+			dao.b_inputDao(bname, bcategori, bwriter);
+			
+		return "redirect:book_list";
+	}
+	
+	
+	
+//	
+	@RequestMapping(value ="/br_list")
+	public String br_list(HttpServletRequest request, Model model) {
+		
+		String searchKeyword = request.getParameter("searchKeyword");
+		String searchOption = request.getParameter("searchOption");
+		System.out.println(searchKeyword);		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		ArrayList<BorrowDto> brDtos = null;
+		if(searchOption == null || searchKeyword == null) {
+			brDtos = dao.br_listDao();
+		} else {
+			if(searchOption.equals("brmid")) {
+				//제목에서 특정 키워드 검색한 결과
+				brDtos = dao.IdSearchlistDao(searchKeyword);
+			}
+		}
+		
+						
+		model.addAttribute("br_list", brDtos);
+		
+		return "br_list";
+		
+	}
+//	
+//	
+	@RequestMapping(value="/br_input")
+	public String br_input() {
+		
+		return "br_input";
+	}
+	
+	
+	@RequestMapping(value ="/br_inputOk")
+	public String br_inputOk(HttpServletRequest request, Model model) {
+		String brbcode = request.getParameter("brbcode");
+		String brmid = request.getParameter("brmid");
+								
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+			dao.br_inputDao(brbcode, brmid);
+			dao.bstateDao();
+			    
+		return  "redirect:br_list";
+	}
+	
+	
 }
 	
 

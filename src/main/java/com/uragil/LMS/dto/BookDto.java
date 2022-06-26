@@ -3,23 +3,31 @@ package com.uragil.LMS.dto;
 public class BookDto {
 
 
-	private int bcode;
+	private String bcode;
 	private String bname;
 	private String bcategori;
 	private String bwriter;
 	private String bstate;
-	private String brcode;
+	private String rdate;
 	
+	public String getRdate() {
+		return rdate;
+	}
+
+	public void setRdate(String rdate) {
+		this.rdate = rdate;
+	}
+
 	public BookDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public int getBcode() {
+	public String getBcode() {
 		return bcode;
 	}
 
-	public void setBcode(int bcode) {
+	public void setBcode(String bcode) {
 		this.bcode = bcode;
 	}
 
@@ -55,13 +63,6 @@ public class BookDto {
 		this.bstate = bstate;
 	}
 
-	public String getBrcode() {
-		return brcode;
-	}
-
-	public void setBrcode(String brcode) {
-		this.brcode = brcode;
-	}
-	
+		
 	
 }

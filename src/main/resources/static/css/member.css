@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+span.text01{
+	font-size: 14x;
+	color: #fff;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+span.text02{
+	font-size: 14x;
+	color: #ffffff;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+span.text03{
+	font-size: 18x;
+	color: #c1ee28;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+
+input.type01{
+	
+	border: 2px solid #dfd;
+	background-color: #ffffff;
+	width : 220px;
+	padding:5px; 
+	font-family: Arial;
+	font-size: 14px
+	
+}
+
+input.button01{
+	
+	background-color: #4CAF50;
+	width : 280px;
+	
+	padding: 4px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #dfd;
+	font-family: malgun;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+input.button01:hover {
+  border:2px solid #ffffff;
+  background-color: #1d8322;
+  color: #fff;
+}
+
+
+#textarea01{
+	border: 2px solid #c8e0e8;
+	background-color: #ffffff;
+	width : 220px;
+	padding:5px; 
+	font-family: Arial;
+	font-size: 14px	
+}
+
+
+input.button02{
+	
+	background-color: #ff80c0;
+	width : 109px;
+	
+	padding: 5px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fdd;
+	font-family: malgun;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+input.button02:hover {
+  border:2px solid #ffffff;
+  background-color: #ff0080;
+  color: white;
+}
+
+
+input.button03{
+	width : 89px;
+	border:2px solid #ccf;
+	background-color: #ddd;
+	padding: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #0080c0;
+	font-family: malgun;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+input.button03:hover {
+  border:2px solid #33a;
+  background-color: #0080ff;
+  color: white;
+}
+
+#textarea02{
+	border: 2px solid #c8e0e8;
+	background-color: #ffffff;
+	width : 220px;
+	padding:5px; 
+	font-family: Arial;
+	font-size: 14px	
+}
+
+
+
+input.button04{
+	
+	background-color: #4CAF50;
+	width : 280px;
+	border:2px solid #cfc;
+	padding: 4px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #dfd;
+	font-family: malgun;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+input.button04:hover {
+  border:2px solid #242;
+  background-color: #1d8322;
+  color: #fff;
+}
+
+
+input.button05{
+	
+	padding:5px;
+	width : 80px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #111;
+	font-family: malgun;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+input.button05:hover {
+  border:1px solid #111;
+  background-color: #ccc;
+  font-weight: bold;
+  color: #000;
+}

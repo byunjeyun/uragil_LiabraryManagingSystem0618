@@ -25,4 +25,51 @@
 
 
 
+
+
+
+<!-- book SQL -->
+	<select id="b_listDao" resultType="com.uragil.LMS.dto.BookDto">
+		SELECT * FROM b_book
+	</select>
+
+	<select id="br_listDao2" resultType="com.uragil.LMS.dto.BorrowDto">
+		SELECT rdate FROM b_borrow where brbcode=#{param1}
+	</select>
+
+	<select id="TitleSearchlistDao" resultType="com.uragil.LMS.dto.BookDto">
+		SELECT * FROM b_book WHERE bname LIKE '%'|| #{param1} ||'%' ORDER BY bcode DESC  
+	</select>
+	
+	<select id="CategoriSearchlistDao" resultType="com.uragil.LMS.dto.BookDto">
+		SELECT * FROM b_book WHERE bcategori LIKE '%'|| #{param1} ||'%' ORDER BY bcategori DESC  
+	</select>
+	
+	<select id="WriterSearchlistDao" resultType="com.uragil.LMS.dto.BookDto">
+		SELECT * FROM b_book WHERE bwriter LIKE '%'|| #{param1} ||'%' ORDER BY bname DESC  
+	</select>
+
+	<insert id="b_inputDao">
+		INSERT INTO b_book (bcode, bname, bcategori, bwriter)VALUES(b_book_seq.nextval, #{param1},#{param2},#{param3})
+	</insert>
+
+	<update id="bstateDao">
+		UPDATE b_book T1 SET T1.bstate = (SELECT T2.bstate FROM b_borrow T2 WHERE T2.brbcode = T1.bcode),T1.rdate = (SELECT T2.rdate FROM b_borrow T2 WHERE T2.brbcode = T1.bcode) WHERE T1.bcode IN (SELECT T2.brbcode FROM b_borrow T2 WHERE T2.brbcode = T1.bcode)
+	</update>
+
+		
+
+<!-- borrow SQL -->	
+	<select id="br_listDao" resultType="com.uragil.LMS.dto.BorrowDto">
+		SELECT * FROM b_borrow
+	</select>
+
+	<select id="IdSearchlistDao" resultType="com.uragil.LMS.dto.BorrowDto">
+		SELECT * FROM b_borrow WHERE brmid LIKE '%'|| #{param1} ||'%' ORDER BY brmid DESC  
+	</select>
+	
+	<insert id="br_inputDao">
+		INSERT INTO b_borrow(brcode, brbcode, brmid) VALUES(b_borrow_seq.nextval, #{param1}, #{param2})
+	</insert>
+
 </mapper>

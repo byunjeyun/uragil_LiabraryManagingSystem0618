@@ -3,7 +3,7 @@ package com.uragil.LMS.dto;
 public class MemberDto {
 
 
-	private int mnid;
+	private String mid;
 	private String mpw;
 	private String mname;
 	private String mphone;
@@ -12,19 +12,19 @@ public class MemberDto {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public MemberDto(int mnid, String mpw, String mname, String mphone, String brcode) {
+	public MemberDto(String mid, String mpw, String mname, String mphone, String brcode) {
 		super();
-		this.mnid = mnid;
+		this.mid = mid;
 		this.mpw = mpw;
 		this.mname = mname;
 		this.mphone = mphone;
 		this.brcode = brcode;
 	}
-	public int getMnid() {
-		return mnid;
+	public String getMid() {
+		return mid;
 	}
-	public void setMnid(int mnid) {
-		this.mnid = mnid;
+	public void setMid(String mid) {
+		this.mid = mid;
 	}
 	public String getMpw() {
 		return mpw;
