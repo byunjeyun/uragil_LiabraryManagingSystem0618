@@ -15,31 +15,31 @@
 <body>
 	<table width="100%" cellspacing="0" cellpadding="0">
 		<tr height="50" bgcolor="#111111" >
-			<td width="60%" class="header01">&nbsp;</td>
-			<td width="100" class="header01"><a href="index">홈화면</a></td>
-			<td width="100" class="header01">		
+			<td width="70%" class="header01">&nbsp;</td>
+			<td width="10%" class="header01"><a href="index">HOME</a></td>
+			<td width="10%" class="header01">		
 			<%
 				String sessionValid = (String) session.getAttribute("id");
 				if(sessionValid == null){
 			%>
-			<a href="/login">로그인</a>
+			<a href="/login">LogIn</a>
 			<%
 			}else{
 			%>
-			<a href="logout">로그아웃</a></td>
+			<a href="logout">LogOut</a></td>
 			<%
 			}
 			%>
 								
-			<td width="100" class="header01">
+			<td width="10%" class="header01">
 			<%
 				if(sessionValid == null){
 			%>
-			<a href="join">회원가입</a>
+			<a href="join">Join</a>
 			<%
 			}else{
 			%>
-			<a href="infoModify">정보수정</td>
+			<a href="infoModify">Modify</td>
 			<%
 			}
 			%>

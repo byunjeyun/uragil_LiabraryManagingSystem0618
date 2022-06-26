@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<<<<<<< HEAD
+
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/content.css?after">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/main.css?after">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/member.css?after">
@@ -29,8 +29,13 @@
 		</tr>
 					<table border="0" cellspacing="0" cellpadding="10">
 							<tr>
+								
+								<td colspan="2"align="left">
+								<span class="content01">도서정보 목록</span></td>
 								<form action="book_list"> 
-								<td colspan="6" align="right">
+								
+								<td colspan="4" align="right">
+								
 								<select name="searchOption">
            							<option value="title">제목</option>
             						<option value="categori">장르</option>
@@ -64,9 +69,9 @@
 							<tr >
 							
 							<td colspan="6"  align="right">
-								<input class="button05" type="button" value="도서입력" onclick="location.href='book_input'">&nbsp;&nbsp;
-								<input class="button05" type="button" value="대출열람" onclick="location.href='br_list'">&nbsp;&nbsp;	
-								<input class="button05" type="button" value="홈으로" onclick="location.href='index'">
+								<input class="button03" type="button" value="도서입력" onclick="location.href='book_input'">&nbsp;&nbsp;
+								<input class="button03" type="button" value="대출열람" onclick="location.href='br_list'">&nbsp;&nbsp;	
+								<input class="button03" type="button" value="홈으로" onclick="location.href='index'">
 							</td>
 						</tr>				
 

@@ -64,16 +64,16 @@
 								<td class="board02">${brdto.bstate}</td>
 								
 								<td colspan="5" align="right">
-									<input type="button" class="button02" value="반납확인" onclick="location.href='question'">
+									<input type="button" class="button02" value="반납확인">
 								</td>
 							</tr>
 							</c:forEach>
 							<tr>
 							<td colspan="7"  align="right">
 									
-								<input class="button05" type="button" value="대출입력" onclick="location.href='br_input'">&nbsp;&nbsp;
-								<input class="button05" type="button" value="도서열람" onclick="location.href='book_list'">&nbsp;&nbsp;	
-								<input class="button05"type="button" value="홈으로" onclick="location.href='index'">
+								<input class="button03" type="button" value="대출입력" onclick="location.href='br_input'">&nbsp;&nbsp;
+								<input class="button03" type="button" value="도서열람" onclick="location.href='book_list'">&nbsp;&nbsp;	
+								<input class="button03"type="button" value="홈으로" onclick="location.href='index'">
 							</td>
 						</tr>						
 					</table>
