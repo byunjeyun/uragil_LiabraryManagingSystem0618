@@ -35,25 +35,3 @@ img{
 	margin : auto;
 	
 }
-
-/* unvisited link */
-a:link {
-	
-  text-decoration: none;
-  color: #ffffff;
-}
-
-/* visited link */
-a:visited {
-  color: #ffffff;
-}
-
-/* mouse over link */
-a:hover {
-  color: #ff8000;
-}
-
-/* selected link */
-a:active {
-  color: yellow;
-} 

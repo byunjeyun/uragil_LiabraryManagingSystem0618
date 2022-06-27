@@ -31,7 +31,7 @@
 
 <!-- book SQL -->
 	<select id="b_listDao" resultType="com.uragil.LMS.dto.BookDto">
-		SELECT * FROM b_book
+		SELECT * FROM b_book ORDER BY bname ASC
 	</select>
 
 	<select id="br_listDao2" resultType="com.uragil.LMS.dto.BorrowDto">
@@ -55,16 +55,22 @@
 	</insert>
 
 	<update id="bstateDao">
-		UPDATE b_book T1 SET T1.bstate = (SELECT T2.bstate FROM b_borrow T2 WHERE T2.brbcode = T1.bcode),T1.rdate = (SELECT T2.rdate FROM b_borrow T2 WHERE T2.brbcode = T1.bcode) WHERE T1.bcode IN (SELECT T2.brbcode FROM b_borrow T2 WHERE T2.brbcode = T1.bcode)
+		UPDATE b_book T1 SET T1.bstate = (SELECT DISTINCT T2.bstate FROM b_borrow T2 WHERE T2.brbcode = T1.bcode),T1.rdate = (SELECT DISTINCT T2.rdate FROM b_borrow T2 WHERE T2.brbcode = T1.bcode) WHERE T1.bcode IN (SELECT DISTINCT T2.brbcode FROM b_borrow T2 WHERE T2.brbcode = T1.bcode)
 	</update>
 
-	<update id="bModify">
-		UPDATE b_book SET bname=#{param1}, bcategori=#{param2}, bwriter=#{param3} WHERE bcode=#{param4}
+	<select id="modifyViewDao" resultType="com.uragil.LMS.dto.BookDto">
+		SELECT * FROM b_book WHERE bcode = #{param1}
+	</select>
+	
+	
+	<update id="bookModifyDao">
+		UPDATE b_book SET bname=#{param1}, bcategori=#{param2}, bwriter=#{param3} WHERE bcode=#{param4} 	
 	</update>
+	
 
 <!-- borrow SQL -->	
 	<select id="br_listDao" resultType="com.uragil.LMS.dto.BorrowDto">
-		SELECT * FROM b_borrow
+		SELECT * FROM b_borrow ORDER BY sdate DESC
 	</select>
 
 	<select id="IdSearchlistDao" resultType="com.uragil.LMS.dto.BorrowDto">
@@ -75,7 +81,9 @@
 		INSERT INTO b_borrow(brcode, brbcode, brmid) VALUES(b_borrow_seq.nextval, #{param1}, #{param2})
 	</insert>
 
-
+	<update id="br_updateDao">
+		UPDATE b_borrow SET bstate=#{param1}, rdate=#{param2} WHERE brbcode=#{param3} 	
+	</update>
 
 	
 </mapper>

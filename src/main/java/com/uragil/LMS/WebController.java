@@ -15,12 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.uragil.LMS.dao.IDao;
 import com.uragil.LMS.dto.BookDto;
 import com.uragil.LMS.dto.BorrowDto;
-
 import com.uragil.LMS.dto.MemberDto;
-
-
-
-
 
 
 
@@ -196,6 +191,8 @@ public class WebController {
 	
 	
 	
+	
+	
 //	
 	@RequestMapping(value ="/br_list")
 	public String br_list(HttpServletRequest request, Model model) {
@@ -243,21 +240,52 @@ public class WebController {
 		return  "redirect:br_list";
 	}
 	
+	@RequestMapping(value ="/b_modifyView")
+	public String b_modify(HttpServletRequest request, Model model) {
+		
+		String bcode = request.getParameter("bcode");
+		IDao dao = sqlSession.getMapper(IDao.class);
+		BookDto bDto = dao.modifyViewDao(bcode);
+		
+		model.addAttribute("bDto", bDto);
+		
+		
+		
+		return  "b_modifyView";
+	}
 	
-	
-	@RequestMapping(value ="/b_modify")
-	public String b_modify(HttpServletRequest request) {
+	@RequestMapping(value = "/b_modifyOk")
+	public String b_modifyOk(HttpServletRequest request) {
 		
 		IDao dao = sqlSession.getMapper(IDao.class);
+		
 		String bcode = request.getParameter("bcode");
 		String bname = request.getParameter("bname");
 		String bcategori = request.getParameter("bcategori");
 		String bwriter = request.getParameter("bwriter");
 		
-		dao.bModify(bname, bcategori, bwriter, bcode);
+		dao.bookModifyDao(bname, bcategori, bwriter, bcode);
 		
-		return  "redirect:book_list";
+		return "redirect:book_list";
 	}
+	
+	
+
+	@RequestMapping(value = "/br_update")
+	public String br_update(HttpServletRequest request) {
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		String brbcode = request.getParameter("brbcode");
+		String bstate = "";
+		String rdate = "";
+		
+		
+		dao.br_updateDao(bstate, rdate, brbcode);
+		dao.bstateDao();
+		return "redirect:br_list";
+	}
+	
 }
 
 

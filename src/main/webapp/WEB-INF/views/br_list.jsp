@@ -63,9 +63,21 @@
 								
 								<td class="board02">${brdto.bstate}</td>
 								
+								
+								
+								<c:if test="${brdto.rdate == null}">
 								<td colspan="5" align="right">
-									<input type="button" class="button02" value="반납확인">
+									<input class="button06" type="button" value="반납완료" >
 								</td>
+								</c:if>
+								
+								<c:if test="${brdto.rdate != null}">
+								<td colspan="5" align="right">
+									<input class="button02" type="button" value="반납버튼" onclick="location.href='br_update?brbcode=${brdto.brbcode}'">
+								</td>
+								</c:if>
+								
+								
 							</tr>
 							</c:forEach>
 							<tr>

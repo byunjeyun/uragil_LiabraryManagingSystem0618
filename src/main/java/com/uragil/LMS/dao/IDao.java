@@ -31,7 +31,9 @@ public interface IDao {
 	public ArrayList<BookDto> TitleSearchlistDao(String keyword);
 	public ArrayList<BookDto> CategoriSearchlistDao(String keyword);
 	public ArrayList<BookDto> WriterSearchlistDao(String keyword);
-	public void bModify(String bname, String bcategori, String bwriter, String bcode);
+	public BookDto modifyViewDao(String bcode);
+	public void bookModifyDao(String bcode, String bname, String bcategori, String bwriter);
+	
 	
 	//	
 //	
@@ -39,7 +41,7 @@ public interface IDao {
 	public ArrayList<BorrowDto> br_listDao();//리스트 가져오기
 	public ArrayList<BorrowDto> IdSearchlistDao(String keyword);
 	public void br_inputDao(String brbcode, String brmid);
-	
+	public void br_updateDao(String brbcode, String rdate, String bstate);
 	
 	
 }

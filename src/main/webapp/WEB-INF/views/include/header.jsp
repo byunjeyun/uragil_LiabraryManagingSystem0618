@@ -16,17 +16,17 @@
 	<table width="100%" cellspacing="0" cellpadding="0">
 		<tr height="50" bgcolor="#111111" >
 			<td width="70%" class="header01">&nbsp;</td>
-			<td width="10%" class="header01"><a href="index">HOME</a></td>
+			<td width="10%" class="header01"><a href="index" style="color:#fff;">HOME</a></td>
 			<td width="10%" class="header01">		
 			<%
 				String sessionValid = (String) session.getAttribute("id");
 				if(sessionValid == null){
 			%>
-			<a href="/login">LogIn</a>
+			<a href="/login" style="color:#fff;">LogIn</a>
 			<%
 			}else{
 			%>
-			<a href="logout">LogOut</a></td>
+			<a href="logout" style="color:#fff;">LogOut</a></td>
 			<%
 			}
 			%>
@@ -35,11 +35,11 @@
 			<%
 				if(sessionValid == null){
 			%>
-			<a href="join">Join</a>
+			<a href="join" style="color:#fff;">Join</a>
 			<%
 			}else{
 			%>
-			<a href="infoModify">Modify</td>
+			<a href="infoModify" style="color:#fff;">Modify</td>
 			<%
 			}
 			%>

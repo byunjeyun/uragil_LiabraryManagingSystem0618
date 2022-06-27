@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,13 +31,13 @@
 					
 						<tr align="center">
 							<td colspan="2" >
-							<span class="content05">도서정보 입력</span>
+							<span class="content05">도서정보 수정</span>
 							</td>
 						</tr>
-						
+						<input  type="hidden" name="bcode" value="${bDto.bcode}">
 						<tr align="right">
 							<td>
-									<span class="content03" >도서명 :</span>
+								<span class="content03" >도서명 :</span>
 							</td>
 							<td >
 								<input  type="text" name="bname" value="${bDto.bname}">
@@ -68,8 +71,8 @@
 						<tr>
 							<td colspan="2" align="right">
 								<input class="button03" type="button" value="도서정보" onclick="location.href='book_list'">
+								<input class="button03" type="button" value="도서입력" onclick="location.href='book_list'">
 								<input class="button03" type="button" value="대출정보" onclick="location.href='br_list'">
-								<input class="button03" type="button" value="도서정보" onclick="location.href='book_list'">
 							</td>
 						</tr>					
 

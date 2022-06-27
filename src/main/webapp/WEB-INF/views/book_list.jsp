@@ -11,8 +11,8 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/content.css?after">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/main.css?after">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/member.css?after">
-<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/header.css?after">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/board.css?after">
+
 <title>책 정보 목록</title>
 </head>
 <body>
@@ -39,7 +39,7 @@
 								<select name="searchOption">
            							<option value="title">제목</option>
             						<option value="categori">장르</option>
-            						<option value="writer">타이틀</option>
+            						<option value="writer">저자</option>
           						</select> 
 							      <input type="text" name="searchKeyword">
 							      <input type="submit" value="검색">
@@ -58,7 +58,8 @@
 							<c:forEach items="${b_list }" var="bdto">
 							<tr class="board02" align="center">
 								<td  class="board02">${bdto.bcode}</td>
-								<td  class="board03">${bdto.bname}</td>
+								<td  class="board03"><a href="b_modifyView?bcode=${bdto.bcode }">${bdto.bname}</a></td>
+								
 								<td  class="board02">${bdto.bcategori}</td>
 								<td  class="board02">${bdto.bwriter }</td>
 								

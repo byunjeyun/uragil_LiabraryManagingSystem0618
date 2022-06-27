@@ -31,22 +31,22 @@
 		
 		
 		<tr>
-			<td class=""align="center"> <a href="book_input">1.도서정보 입력</a></td>
+			<td class=""align="center"> <a href="book_input" style="color:white;">1.도서정보 입력</a></td>
 		</tr>
 		
 		<tr>
-			<td    align="center"> <a href="book_list">2. 도서정보 열람</a><td>
+			<td    align="center"> <a href="book_list" style="color:white;">2. 도서정보 열람</a><td>
 		</tr>
 		<tr>
-			<td class=""align="center"> <a href="br_input">3. 대출정보 입력</a></td>
-		</tr>
-		
-		<tr>
-			<td   align="center"> <a href="br_list">4. 대출정보 열람</a><td>
+			<td class=""align="center"> <a href="br_input" style="color:white;">3. 대출정보 입력</a></td>
 		</tr>
 		
 		<tr>
-			<td class=""align="center"> <a href="">5. 회원정보 열람</a></td>
+			<td   align="center"> <a href="br_list" style="color:white;">4. 대출정보 열람</a><td>
+		</tr>
+		
+		<tr>
+			<td align="center" > <a href="" style="color:white;">5. 회원정보 열람</a></td>
 		</tr>
 	</table>
 			</td>
