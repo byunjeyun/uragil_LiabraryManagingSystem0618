@@ -58,7 +58,9 @@
 		UPDATE b_book T1 SET T1.bstate = (SELECT T2.bstate FROM b_borrow T2 WHERE T2.brbcode = T1.bcode),T1.rdate = (SELECT T2.rdate FROM b_borrow T2 WHERE T2.brbcode = T1.bcode) WHERE T1.bcode IN (SELECT T2.brbcode FROM b_borrow T2 WHERE T2.brbcode = T1.bcode)
 	</update>
 
-		
+	<update id="bModify">
+		UPDATE b_book SET bname=#{param1}, bcategori=#{param2}, bwriter=#{param3} WHERE bcode=#{param4}
+	</update>
 
 <!-- borrow SQL -->	
 	<select id="br_listDao" resultType="com.uragil.LMS.dto.BorrowDto">

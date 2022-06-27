@@ -24,6 +24,7 @@ import com.uragil.LMS.dto.MemberDto;
 
 
 
+
 @Controller
 public class WebController {
 
@@ -242,10 +243,21 @@ public class WebController {
 		return  "redirect:br_list";
 	}
 	
-
-
-
 	
+	
+	@RequestMapping(value ="/b_modify")
+	public String b_modify(HttpServletRequest request) {
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		String bcode = request.getParameter("bcode");
+		String bname = request.getParameter("bname");
+		String bcategori = request.getParameter("bcategori");
+		String bwriter = request.getParameter("bwriter");
+		
+		dao.bModify(bname, bcategori, bwriter, bcode);
+		
+		return  "redirect:book_list";
+	}
 }
-	
+
 

@@ -61,9 +61,24 @@
 								<td  class="board03">${bdto.bname}</td>
 								<td  class="board02">${bdto.bcategori}</td>
 								<td  class="board02">${bdto.bwriter }</td>
-								<td  class="board03">${bdto.bstate }</td>
-								<td  class="board02"><c:out value="${fn:substring(bdto.rdate,2,11)}"/></td>
-									
+								
+								<c:if test="${bdto.bstate !=null}">
+								<td  class="board04">${bdto.bstate }</td>
+								</c:if>
+								
+								<c:if test="${bdto.rdate == null}">
+								<td  class="board05">${bdto.bstate }</td>
+								</c:if>
+								
+								<c:if test="${bdto.bstate !=null}">
+								<td  class="board04"><c:out value="${fn:substring(bdto.rdate,2,11)}"/></td>
+								</c:if>
+								
+								<c:if test="${bdto.rdate == null}">
+								<td  class="board05"><c:out value="${fn:substring(bdto.rdate,2,11)}"/></td>
+								</c:if>
+								   
+							          
 							</c:forEach>
 							</tr>
 							<tr >

@@ -4,6 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
+<script type="text/javascript" src="${pageContext.request.contextPath }/resources/js/input.js"></script>
 <title>Insert title here</title>
 
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/content.css?after">
@@ -18,7 +20,7 @@
 	<table width="70%" border="0" cellspacing="0" cellpadding="10">
 		<tr height="530">
 			<td bgcolor="#bbbbbb" align="center" height="500">
-				<form action="br_inputOk" method="get" name="reg_frm">
+				<form action="br_inputOk" method="get" name="brreg_frm">
 				<table>
 					<table bgcolor="#fff" height="120" width="300" cellspacing="10px">
 						
@@ -50,7 +52,7 @@
 						
 						<tr>
 							<td colspan="2"  align="right">
-								<input class="button04" type="submit" value="대출정보 입력">
+								<input class="button04" type="button" value="대출정보 입력" onclick="brinputCheck()">	
 								
 							</td>
 						</tr>

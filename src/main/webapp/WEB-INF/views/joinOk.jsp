@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 
 <script type="text/javascript" src="${pageContext.request.contextPath }/resources/js/join.js"></script>
-
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/member.css?after">
 <title>Insert title here</title>
 </head>
 <body>

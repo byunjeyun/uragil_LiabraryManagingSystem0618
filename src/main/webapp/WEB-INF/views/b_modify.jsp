@@ -22,7 +22,7 @@
 	<table width="70%" border="0" cellspacing="0" cellpadding="10">
 		<tr height="530">
 			<td bgcolor="#bbb" align="center" height="500">
-				<form action="book_inputOk" method="get" name="breg_frm">
+				<form action="b_modifyOk" method="get" name="breg_frm">
 				<table>
 					<table bgcolor="#fff" height="120" width="300" cellspacing="10px">
 					
@@ -37,7 +37,7 @@
 									<span class="content03" >도서명 :</span>
 							</td>
 							<td >
-								<input  type="text" name="bname">
+								<input  type="text" name="bname" value="${bDto.bname}">
 							</td>
 							
 						<tr align="right">
@@ -45,7 +45,7 @@
 									<span class="content03">장르 :</span>
 							</td>
 							<td  >
-								<input  type="text" name="bcategori">
+								<input  type="text" name="bcategori" value="${bDto.bcategori}">
 							</td>
 						</tr>
 						
@@ -54,7 +54,7 @@
 									<span class="content03">작가 :</span>
 							</td>
 							<td>
-								<input  type="text" name="bwriter">
+								<input  type="text" name="bwriter" value="${bDto.bwriter}">
 							</td>
 							
 						</tr>
@@ -62,7 +62,7 @@
 												
 						<tr>
 							<td colspan="2" align="right">
-								<input class="button04" type="button" value="도서정보 입력" onclick="inputCheck()">
+								<input class="button04" type="button" value="수정내용 입력" onclick="inputCheck()">
 							</td>
 						</tr>
 						<tr>
