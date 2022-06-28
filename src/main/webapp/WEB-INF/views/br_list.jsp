@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<script type="text/javascript" src="${pageContext.request.contextPath }/resources/js/input.js"></script>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/menu.css?after">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/board.css?after">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/header.css?after">
@@ -37,7 +37,10 @@
 							      <input type="submit" value="검색">
 							   </td>
 							</tr>
-							   </form>
+								
+						</form>
+						
+						
 							<tr class="board01" >
 								<td >대출코드</td>
 								<td >도서코드</td>
@@ -73,9 +76,11 @@
 								
 								<c:if test="${brdto.rdate != null}">
 								<td colspan="5" align="right">
-								
-									<input class="button02" type="button" value="반납" onclick="location.href='br_update?brcode=${brdto.brcode}'">
-									
+								<form action='br_update?brcode=${brdto.brcode}'> 
+									<input type="hidden" name= "brcode" value="${brdto.brcode}">
+									<input type="hidden" name= "brbcode" value="${brdto.brbcode}">
+									<input class="button02" type="submit" value="반납" onclick="location.href='br_update?brcode=${brdto.brcode}'">
+								</form>	
 								
 								</td>
 								</c:if>

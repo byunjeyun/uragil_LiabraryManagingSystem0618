@@ -309,28 +309,6 @@ public class WebController {
 	}
 	
 
-	@RequestMapping(value = "/br_update")
-	public String br_update(HttpServletRequest request) {
-		
-		
-		IDao dao = sqlSession.getMapper(IDao.class);
-		
-		String brcode = request.getParameter("brcode");
-		
-		String bstate = "";
-		String rdate = "";
-		String brbcode = request.getParameter("brbcode");
-		
-		
-		//brbcode 업데이트 문자열 붙여주기 
-		dao.br_updateDao(bstate, rdate, brcode);
-		dao.bstateDao();
-		
-		return "redirect:br_list";
-	}
-	
-	
-
 //	@RequestMapping(value = "/br_update")
 //	public String br_update(HttpServletRequest request) {
 //		
@@ -342,14 +320,36 @@ public class WebController {
 //		String bstate = "";
 //		String rdate = "";
 //		String brbcode = request.getParameter("brbcode");
-//		brbcode = "a"+brbcode;
+//		
 //		
 //		//brbcode 업데이트 문자열 붙여주기 
-//		dao.br_updateDao(brbcode, bstate, rdate, brcode);
+//		dao.br_updateDao(bstate, rdate, brcode);
 //		dao.bstateDao();
 //		
 //		return "redirect:br_list";
 //	}
+//	
+	
+
+	@RequestMapping(value = "/br_update")
+	public String br_update(HttpServletRequest request) {
+		
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		String brcode = request.getParameter("brcode");
+		
+		String bstate = "";
+		String rdate = "";
+		String brbcode = request.getParameter("brbcode");
+		brbcode = "a"+ brbcode;
+		
+		//brbcode 업데이트 문자열 붙여주기 
+		dao.br_updateDao(bstate, rdate, brcode);
+		dao.bstateDao();
+		dao.rbcodeDao(brbcode, brcode);
+		return "redirect:br_list";
+	}
 	
 }
 

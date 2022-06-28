@@ -83,16 +83,18 @@
 		INSERT INTO b_borrow(brcode, brbcode, brmid) VALUES(b_borrow_seq.nextval, #{param1}, #{param2})
 	</insert>
 
+<!-- <update id="br_updateDao">
+		UPDATE b_borrow SET bstate=#{param1}, rdate=#{param2} WHERE brcode=#{param3} 	
+	</update>
+ -->
+ 
 	<update id="br_updateDao">
 		UPDATE b_borrow SET bstate=#{param1}, rdate=#{param2} WHERE brcode=#{param3} 	
 	</update>
 
-<!-- 
-	<update id="br_updateDao">
-		UPDATE b_borrow SET brbcode=#{param1}, bstate=#{param2}, rdate=#{param3} WHERE brcode=#{param4} 	
+	<update id="rbcodeDao">
+		UPDATE b_borrow SET brbcode=#{param1} WHERE brcode=#{param2} 	
 	</update>
- -->
-
 	
 </mapper>
 

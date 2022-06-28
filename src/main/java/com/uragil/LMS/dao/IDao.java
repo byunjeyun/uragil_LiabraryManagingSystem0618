@@ -39,8 +39,8 @@ public interface IDao {
 	public ArrayList<BorrowDto> IdSearchlistDao(String keyword);
 	public void br_inputDao(String brbcode, String brmid);
 	
-	public void br_updateDao(String rdate, String bstate, String brbcode);
-	//public void br_updateDao(String brcode, String rdate, String bstate, String brbcode);
-	
+	//public void br_updateDao(String rdate, String bstate, String brbcode);
+	public void br_updateDao(String brcode, String rdate, String bstate);
+	public void rbcodeDao(String brbcode, String brcode);
 	
 }
