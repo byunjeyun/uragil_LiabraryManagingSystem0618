@@ -46,7 +46,7 @@
 		</tr>
 		
 		<tr>
-			<td align="center" > <a href="" style="color:white;">5. 회원정보 열람</a></td>
+			<td align="center" > <a href="member_list" style="color:white;">5. 회원정보 열람</a></td>
 		</tr>
 	</table>
 			</td>

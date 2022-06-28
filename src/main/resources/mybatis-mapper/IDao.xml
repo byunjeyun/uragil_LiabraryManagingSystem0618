@@ -23,7 +23,9 @@
 		SELECT * FROM b_member WHERE mid = #{param1}
 	</select>
 
-
+	<select id="m_listDao" resultType="com.uragil.LMS.dto.MemberDto">
+		SELECT * FROM b_member
+	</select>
 
 
 
@@ -82,8 +84,14 @@
 	</insert>
 
 	<update id="br_updateDao">
-		UPDATE b_borrow SET bstate=#{param1}, rdate=#{param2} WHERE brbcode=#{param3} 	
+		UPDATE b_borrow SET bstate=#{param1}, rdate=#{param2} WHERE brcode=#{param3} 	
 	</update>
+
+<!-- 
+	<update id="br_updateDao">
+		UPDATE b_borrow SET brbcode=#{param1}, bstate=#{param2}, rdate=#{param3} WHERE brcode=#{param4} 	
+	</update>
+ -->
 
 	
 </mapper>

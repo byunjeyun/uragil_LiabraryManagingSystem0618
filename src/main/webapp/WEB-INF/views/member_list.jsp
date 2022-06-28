@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/member.css?after">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/board.css?after">
 
-<title>책 정보 목록</title>
+<title>회원 정보 목록</title>
 </head>
 <body>
 
@@ -27,15 +27,15 @@
 		<tr>
 			<td align="center" height=""></td>
 		</tr>
-					<table border="0" cellspacing="0" cellpadding="10">
+					<table border="0" cellspacing="0" cellpadding="10" >
 							<tr>
 								
 								<td colspan="2"align="left">
-								<span class="content01">도서정보 목록</span></td>
-								<form action="book_list"> 
+								<span class="content01">회원정보 목록</span></td>
+								<form action="member_list"> 
 								
 								<td colspan="4" align="right">
-								
+								<!--
 								<select name="searchOption">
            							<option value="title">제목</option>
             						<option value="categori">장르</option>
@@ -43,49 +43,35 @@
           						</select> 
 							      <input type="text" name="searchKeyword">
 							      <input type="submit" value="검색">
+							       -->
 							   </td>
 							   </form>
 							</tr>
 							<tr class="board01">
-								<th >도서코드</th>
-								<th width="250px" >타이틀</th>
-								<th >장르</th>
-								<th >저자</th>
+								<th >회원ID</th>
+								<th >회원명</th>
+								<th >연락처</th>
 								<th >대출상태</th>
 								<th >반납예정일</th>
 							</tr>
 							
-							<c:forEach items="${b_list }" var="bdto">
+							<c:forEach items="${m_list }" var="mdto">
 							<tr class="board02" align="center">
-								<td  class="board02">${bdto.bcode}</td>
-								<td  class="board03"><a href="b_modifyView?bcode=${bdto.bcode }">${bdto.bname}</a></td>
-								
-								<td  class="board02">${bdto.bcategori}</td>
-								<td  class="board02">${bdto.bwriter }</td>
+								<td  class="board02">${mdto.mid}</td>
+								<td  class="board02">${mdto.mname}</td>
+								<td  class="board02">${mdto.mphone }</td>
 								
 								<c:if test="${bdto.bstate !=null}">
-								<td  class="board04">${bdto.bstate }</td>
+								<td  class="board04">${mdto.bstate }</td>
 								</c:if>
 								
-								<c:if test="${bdto.rdate == null}">
-								<td  class="board05">${bdto.bstate }</td>
-								</c:if>
-								
-								<c:if test="${bdto.bstate !=null}">
-								<td  class="board04"><c:out value="${fn:substring(bdto.rdate,2,11)}"/></td>
-								</c:if>
-								
-								<c:if test="${bdto.rdate == null}">
-								<td  class="board05"><c:out value="${fn:substring(bdto.rdate,2,11)}"/></td>
-								</c:if>
-								   
-							          
+															          
 							</c:forEach>
 							</tr>
+							<tr><td> </td></tr>
 							<tr >
-							
 							<td colspan="6"  align="right">
-								<input class="button07" type="button" value="도서입력" onclick="location.href='book_input'">&nbsp;&nbsp;
+								<input class="button03" type="button" value="정보수정" onclick="location.href='book_input'">&nbsp;&nbsp;
 								<input class="button03" type="button" value="대출열람" onclick="location.href='br_list'">&nbsp;&nbsp;	
 								<input class="button03" type="button" value="홈으로" onclick="location.href='index'">
 							</td>

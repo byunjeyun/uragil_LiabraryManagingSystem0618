@@ -174,3 +174,22 @@ input.button06:hover {
   color: white;
 }
 
+input.button07{
+	width : 89px;
+	border:2px solid #ccf;
+	background-color: #bbf0b7;
+	padding: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #0080c0;
+	font-family: malgun;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+input.button07:hover {
+  border:2px solid #3a3;
+  background-color: #00aa30;
+  color: white;
+  
+}

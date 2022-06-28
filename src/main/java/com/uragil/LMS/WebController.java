@@ -125,6 +125,45 @@ public class WebController {
 				
 	}
 	
+	@RequestMapping(value ="/member_list")
+	public String member_list(HttpServletRequest request,  Model model) {
+		
+		String searchKeyword = request.getParameter("searchKeyword");
+		String searchOption = request.getParameter("searchOption");
+		System.out.println(searchKeyword);		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		
+		
+		
+		ArrayList<MemberDto> mDtos = null;
+		ArrayList<BorrowDto> brDtos = null;
+		if(searchOption == null || searchKeyword == null) {
+			mDtos = dao.m_listDao();
+			brDtos = dao.br_listDao();
+//		} else {
+//			if(searchOption.equals("title")) {
+//				//제목 특정 키워드 검색한 결과
+//				mDtos = dao.TitleSearchlistDao(searchKeyword);
+//			} else if(searchOption.equals("categori") ) {
+//				//장르 특정 키워드 검색한 결과
+//				mDtos = dao.CategoriSearchlistDao(searchKeyword);
+//			} else {
+//				//글쓴이에서 특정 키워드 검색한 결과
+//				mDtos = dao.WriterSearchlistDao(searchKeyword);
+//			}
+		
+		}
+				
+		
+		
+		model.addAttribute("m_list", mDtos);
+		model.addAttribute("br_list", brDtos);
+
+		return "member_list";
+		
+		
+	}
 
 	@RequestMapping(value ="/book_list")
 	public String book_list(HttpServletRequest request,  Model model) {
@@ -269,22 +308,48 @@ public class WebController {
 		return "redirect:book_list";
 	}
 	
-	
 
 	@RequestMapping(value = "/br_update")
 	public String br_update(HttpServletRequest request) {
 		
+		
 		IDao dao = sqlSession.getMapper(IDao.class);
 		
-		String brbcode = request.getParameter("brbcode");
+		String brcode = request.getParameter("brcode");
+		
 		String bstate = "";
 		String rdate = "";
+		String brbcode = request.getParameter("brbcode");
 		
 		
-		dao.br_updateDao(bstate, rdate, brbcode);
+		//brbcode 업데이트 문자열 붙여주기 
+		dao.br_updateDao(bstate, rdate, brcode);
 		dao.bstateDao();
+		
 		return "redirect:br_list";
 	}
+	
+	
+
+//	@RequestMapping(value = "/br_update")
+//	public String br_update(HttpServletRequest request) {
+//		
+//		
+//		IDao dao = sqlSession.getMapper(IDao.class);
+//		
+//		String brcode = request.getParameter("brcode");
+//		
+//		String bstate = "";
+//		String rdate = "";
+//		String brbcode = request.getParameter("brbcode");
+//		brbcode = "a"+brbcode;
+//		
+//		//brbcode 업데이트 문자열 붙여주기 
+//		dao.br_updateDao(brbcode, bstate, rdate, brcode);
+//		dao.bstateDao();
+//		
+//		return "redirect:br_list";
+//	}
 	
 }
 

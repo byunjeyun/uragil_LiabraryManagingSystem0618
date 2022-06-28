@@ -12,13 +12,10 @@ public interface IDao {
 	
 	//memberDao
 	public void joinDao(String mid, String mpw, String mname, String mphone);
-	
 	public int checkIdDao(String mid);
-
 	public int checkPwDao(String mid, String mpw);
-
 	public MemberDto loginInfoDao(String mid);
-
+	public ArrayList<MemberDto> m_listDao();
 
 
 	//bookDao
@@ -41,7 +38,9 @@ public interface IDao {
 	public ArrayList<BorrowDto> br_listDao();//리스트 가져오기
 	public ArrayList<BorrowDto> IdSearchlistDao(String keyword);
 	public void br_inputDao(String brbcode, String brmid);
-	public void br_updateDao(String brbcode, String rdate, String bstate);
+	
+	public void br_updateDao(String rdate, String bstate, String brbcode);
+	//public void br_updateDao(String brcode, String rdate, String bstate, String brbcode);
 	
 	
 }
