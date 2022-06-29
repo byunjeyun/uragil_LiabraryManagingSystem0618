@@ -75,14 +75,13 @@
 						
 						<tr>
 							<td colspan="2"  align="right">
-								<input class="button01" type="button" value="회원가입" onclick="joinCheck()">
+								<input class="button01" type="button" value="작성완료" onclick="joinCheck()">
 							</td>
 						</tr>
 						<tr>
 							<td colspan="2"  align="right">
-								<input class="button03" type="button" value="로그인" onclick="location.href='login'">
-								<input class="button03" type="button" value="홈으로" onclick="location.href='index'">
-								<input class="button03" type="button" value="홈으로" onclick="location.href='index'">			
+								<input class="button04" type="button" value="로그인" onclick="location.href='login'">
+								
 							</td>
 						</tr>
 						</form>											

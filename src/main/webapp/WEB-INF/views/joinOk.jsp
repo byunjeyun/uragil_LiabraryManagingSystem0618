@@ -33,6 +33,9 @@
 				<span class="content01"> 
 				'${mname }' 님 회원가입을 축하 드립니다.<br>
 				가입한 ID는</span> <span class="text03">'${mid}' </span> 입니다.
+				<hr>
+					<input class="button03" type="button" value="홈으로" onclick="location.href='home'">
+					
 			</td>		
 		</tr>
 	</table>

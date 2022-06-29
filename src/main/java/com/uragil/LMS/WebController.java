@@ -31,9 +31,9 @@ public class WebController {
 	
 	
 	@RequestMapping(value="/")
-	public String hom() {
+	public String main() {
 		
-		return "home";
+		return "index";
 			
 		}
 	

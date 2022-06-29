@@ -53,7 +53,7 @@
 			<%
 			}else{
 			%>
-			<a href="infoModify" style="color:#fff;">Modify</td>
+			<a href="infoModify" style="color:#fff;">MODIFY</td>
 			<%
 			}
 			%>

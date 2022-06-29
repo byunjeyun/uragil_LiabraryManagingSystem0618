@@ -19,7 +19,7 @@
 	<center>
 	<table width="70%" border="0" cellspacing="0" cellpadding="10">
 		<tr height="530">
-			<td bgcolor="#dfd" align="center" height="500">
+			<td bgcolor="#fff" align="center" height="500">
 			
 	<table bgcolor="#112" height="120" width="400" cellspacing="10px">
 		
