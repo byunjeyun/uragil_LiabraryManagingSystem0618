@@ -85,9 +85,17 @@
 							<tr >
 							
 							<td colspan="6"  align="right">
+								<%
+								String id=(String)session.getAttribute("id");
+								if(id.equals("admin")){
+								%>
 								<input class="button07" type="button" value="도서입력" onclick="location.href='book_input'">&nbsp;&nbsp;
+								<%
+								}
+								%>
+								
 								<input class="button03" type="button" value="대출열람" onclick="location.href='br_list'">&nbsp;&nbsp;	
-								<input class="button03" type="button" value="홈으로" onclick="location.href='index'">
+								<input class="button03" type="button" value="홈으로" onclick="location.href='home'">
 							</td>
 						</tr>				
 

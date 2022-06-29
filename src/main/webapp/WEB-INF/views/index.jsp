@@ -16,42 +16,60 @@
 
 <body>
 <%@ include file="include/header.jsp" %>
-	<center>
-	<table width="70%" border="0" cellspacing="0" cellpadding="10">
+<h2 align="center">Uragil 도서 관리시스템 웹에 방문해 주셔서 감사합니다.</h2> <br>
+<h3 align="center">로그인 후 이용해 주세요</h3>
+<center>	
+		<table width="70%" border="0" cellspacing="0" cellpadding="10">
 		<tr height="530">
-			<td bgcolor="#dfd" align="center" height="500">
-			
-	<table bgcolor="#112" height="120" width="400" cellspacing="10px">
-		
+			<td bgcolor="#bbbbbb" align="center" height="500">
+		<form action="loginOk" method="post">
+			<table bgcolor="#112" height="120" width="300" cellspacing="10px">
+				
+				
 			<tr align="center">
 				<td class="board01" colspan="2" >
-				<span class="content05">Uragil 도서관리시스템</span><br><br>
+				<span class="content05">로그인</span><br><br>
 				</td>
 			</tr>
-		
-		
-		<tr>
-			<td class=""align="center"> <a href="book_input" style="color:white;">1.도서정보 입력</a></td>
-		</tr>
-		
-		<tr>
-			<td    align="center"> <a href="book_list" style="color:white;">2. 도서정보 열람</a><td>
-		</tr>
-		<tr>
-			<td class=""align="center"> <a href="br_input" style="color:white;">3. 대출정보 입력</a></td>
-		</tr>
-		
-		<tr>
-			<td   align="center"> <a href="br_list" style="color:white;">4. 대출정보 열람</a><td>
-		</tr>
-		
-		<tr>
-			<td align="center" > <a href="member_list" style="color:white;">5. 회원정보 열람</a></td>
-		</tr>
-	</table>
-			</td>
-		</tr>
-	</table>
+				
+				<tr align="right" >
+					<td>
+						<span class="text01"> ID :</span>
+					</td>
+					<td>
+						<input type="text" name="mid">
+					</td>
+				</tr>
+				
+				<tr align="right">
+					<td>
+							<span class="text01">PW :</span>
+					</td>
+					<td>
+						<input  type="password" name="mpw">
+					</td>
+					
+				</tr>
+				
+				<tr>
+					<td colspan="2"  align="right">
+						<input class="button01" type="submit" value="로그인">
+					</td>
+				</tr>
+				<tr>	
+					<td colspan="2"  align="right">
+						
+						<input class="button04" type="button" value="회원가입" onclick="location.href='join'">
+						
+					</td>
+				</tr>					
+			</table>
+				</td>
+				</tr>
+			</table>
+		</form>
+			
+	
 	</center>
 </body>
 </html>

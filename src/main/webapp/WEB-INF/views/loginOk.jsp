@@ -40,13 +40,16 @@
 						}else{
 							session.setAttribute("ValidMem", "yes");
 						}
-						
+						 
 					%>
-											
+					sessionvalid						
 					<span class="content01"> 
 					${mname } 님 안녕하세요
 					아이디 ${mid}로 로그인에 성공하셨습니다.			 
 					</span>
+					<hr>
+					<input class="button03" type="button" value="홈으로" onclick="location.href='home'">
+					
 				</td>		
 			</tr>
 		</table>

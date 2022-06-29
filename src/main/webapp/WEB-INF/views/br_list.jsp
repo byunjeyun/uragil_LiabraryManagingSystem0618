@@ -29,7 +29,9 @@
 					
 						<form action="br_list"> 
 							<tr>
-								<td colspan="7" align="right">
+								<td colspan="2"align="left">
+								<span class="content01">대출정보 목록</span></td>
+								<td colspan="5" align="right">
 								<select name="searchOption">
            							<option value="brmid">아이디</option>
           						</select> 
@@ -40,7 +42,7 @@
 								
 						</form>
 						
-						
+													
 							<tr class="board01" >
 								<td >대출코드</td>
 								<td >도서코드</td>
@@ -79,7 +81,7 @@
 								<form action='br_update?brcode=${brdto.brcode}'> 
 									<input type="hidden" name= "brcode" value="${brdto.brcode}">
 									<input type="hidden" name= "brbcode" value="${brdto.brbcode}">
-									<input class="button02" type="submit" value="반납" onclick="location.href='br_update?brcode=${brdto.brcode}'">
+									<input class="button02" type="submit" value="반납확인">
 								</form>	
 								
 								</td>
@@ -90,10 +92,18 @@
 							</c:forEach>
 							<tr>
 							<td colspan="7"  align="right">
-									
+
+								
+								<%
+								String id=(String)session.getAttribute("id");
+								if(id.equals("admin")){
+								%>
 								<input class="button07" type="button" value="대출입력" onclick="location.href='br_input'">&nbsp;&nbsp;
+								<%
+								}
+								%>
 								<input class="button03" type="button" value="도서열람" onclick="location.href='book_list'">&nbsp;&nbsp;	
-								<input class="button03"type="button" value="홈으로" onclick="location.href='index'">
+								<input class="button03"type="button" value="홈으로" onclick="location.href='home'">
 							</td>
 						</tr>						
 					</table>

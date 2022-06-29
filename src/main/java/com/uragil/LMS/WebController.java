@@ -26,12 +26,21 @@ public class WebController {
 	
 	@Autowired
 	private SqlSession sqlSession;
-	
 
+
+	
+	
 	@RequestMapping(value="/")
+	public String hom() {
+		
+		return "home";
+			
+		}
+	
+	@RequestMapping(value="/home")
 	public String home() {
 		
-		return "index";
+		return "home";
 			
 		}
 	
@@ -170,14 +179,19 @@ public class WebController {
 		
 		String searchKeyword = request.getParameter("searchKeyword");
 		String searchOption = request.getParameter("searchOption");
+		String mid = request.getParameter("mid");
 		System.out.println(searchKeyword);		
+		
 		IDao dao = sqlSession.getMapper(IDao.class);
 		
+		
+		HttpSession session = request.getSession();
 		
 		
 		
 		ArrayList<BookDto> bDtos = null;
 		ArrayList<BorrowDto> brDtos = null;
+		
 		if(searchOption == null || searchKeyword == null) {
 			bDtos = dao.b_listDao();
 			brDtos = dao.br_listDao();
@@ -193,6 +207,7 @@ public class WebController {
 				bDtos = dao.WriterSearchlistDao(searchKeyword);
 			}
 		
+			
 		}
 				
 		
@@ -234,6 +249,7 @@ public class WebController {
 //	
 	@RequestMapping(value ="/br_list")
 	public String br_list(HttpServletRequest request, Model model) {
+
 		
 		String searchKeyword = request.getParameter("searchKeyword");
 		String searchOption = request.getParameter("searchOption");

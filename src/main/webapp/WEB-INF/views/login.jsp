@@ -59,9 +59,9 @@
 				</tr>
 				<tr>	
 					<td colspan="2"  align="right">
-						<input class="button03" type="button" value="홈으로" onclick="location.href='index'">
-						<input class="button03" type="button" value="홈으로" onclick="location.href='index'">
-						<input class="button03" type="button" value="회원가입" onclick="location.href='join'">
+						
+						
+						<input class="button04" type="button" value="회원가입" onclick="location.href='join'">
 						
 					</td>
 				</tr>					
