@@ -228,8 +228,7 @@ public class WebController {
 		return "redirect:book_list";
 	}
 	
-	
-	
+		
 	
 	
 //	
@@ -273,11 +272,27 @@ public class WebController {
 								
 		IDao dao = sqlSession.getMapper(IDao.class);
 		
+		int checkbrbcode = dao.checkbrbcodeDao(brbcode);
+		int checkhavebcode = dao.checkhavebcodeDao(brbcode);
+		int checkbrmid = dao.checkbrmidDao(brmid);
+		if (checkbrbcode == 1 & checkhavebcode !=1 & checkbrmid ==1) {
+				 	
 			dao.br_inputDao(brbcode, brmid);
 			dao.bstateDao();
-			    
-		return  "redirect:br_list";
+			
+			model.addAttribute("brbcode", brbcode);
+			model.addAttribute("bname", brmid);
+		}
+		
+		model.addAttribute("checkbrbcode", checkbrbcode);	    
+		model.addAttribute("checkhavebcode", checkhavebcode);
+		model.addAttribute("checkbrmid", checkbrmid);
+		return  "brinputOk";
+		
+		//return  "redirect:br_list";
 	}
+	
+	
 	
 	@RequestMapping(value ="/b_modifyView")
 	public String b_modify(HttpServletRequest request, Model model) {

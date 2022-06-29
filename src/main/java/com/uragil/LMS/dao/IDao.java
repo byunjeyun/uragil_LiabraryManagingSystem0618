@@ -42,5 +42,7 @@ public interface IDao {
 	//public void br_updateDao(String rdate, String bstate, String brbcode);
 	public void br_updateDao(String brcode, String rdate, String bstate);
 	public void rbcodeDao(String brbcode, String brcode);
-	
+	public int checkbrbcodeDao(String brbcode);
+	public int checkhavebcodeDao(String brbcode);
+	public int checkbrmidDao(String brmid);
 }

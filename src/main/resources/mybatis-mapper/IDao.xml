@@ -96,6 +96,18 @@
 		UPDATE b_borrow SET brbcode=#{param1} WHERE brcode=#{param2} 	
 	</update>
 	
+	<select id="checkbrbcodeDao" resultType="int">
+		SELECT COUNT(*) FROM b_book WHERE bcode = #{param1}
+	</select>
+	
+	<select id="checkhavebcodeDao" resultType="int">
+		SELECT COUNT(*) FROM b_borrow WHERE brbcode = #{param1}
+	</select>
+	
+	<select id="checkbrmidDao" resultType="int">
+		SELECT COUNT(*) FROM b_member WHERE mid = #{param1}
+	</select>
+	
 </mapper>
 
 
