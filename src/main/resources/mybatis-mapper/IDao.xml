@@ -78,11 +78,6 @@
 		SELECT * FROM b_borrow ORDER BY sdate DESC
 	</select>
 	
-	<select id="mbr_listDao" resultType="com.uragil.LMS.dto.BorrowDto">
-		SELECT * FROM b_borrow WHERE brmid=#{param1} ORDER BY sdate DESC
-	</select>
-	
-	
 	<select id="IdSearchlistDao" resultType="com.uragil.LMS.dto.BorrowDto">
 		SELECT * FROM b_borrow WHERE brmid LIKE '%'|| #{param1} ||'%' ORDER BY brmid DESC  
 	</select>

@@ -35,7 +35,7 @@ public interface IDao {
 //	
 //	//brDao
 	public ArrayList<BorrowDto> br_listDao();//리스트 가져오기
-	public ArrayList<BorrowDto> mbr_listDao(String brmid);//리스트 가져오기
+	
 	public ArrayList<BorrowDto> IdSearchlistDao(String keyword);
 	public void br_inputDao(String brbcode, String brmid);
 	
