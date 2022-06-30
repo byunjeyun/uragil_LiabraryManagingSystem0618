@@ -309,28 +309,15 @@ public class WebController {
 	public String mbr_list(HttpServletRequest request, Model model) {
 
 		
-		String searchKeyword = request.getParameter("searchKeyword");
-		String searchOption = request.getParameter("searchOption");
-		
 		HttpSession session = request.getSession();
 		IDao dao = sqlSession.getMapper(IDao.class);
 		
-		
 		String sessionId = (String) session.getAttribute("id");
-		
-		
 		String mid = sessionId;
-		
 		ArrayList<BorrowDto> brDtos = dao.IdSearchlistDao(mid);
-		
-		
-		
-		
-				//제목에서 특정 키워드 검색한 결과
-		
 						
 		model.addAttribute("br_list", brDtos);
-		
+	
 		return "br_list";
 		
 	}
