@@ -75,7 +75,8 @@
 						</tr>
 						<tr>
 							<td colspan="2"  align="right">
-								<input class="button04" type="button" value="수정취소" onclick="location.href='home'">
+								<input class="button02" type="button" value="회원탈퇴" onclick="location.href='deleteMem?mid=${memberDto.mid}'">&nbsp;&nbsp;
+								<input class="button03" type="button" value="수정취소" onclick="location.href='home'">
 								
 							</td>
 						</tr>
@@ -84,5 +85,6 @@
 		</tr>
 	</table>
 	</center>
+	<%@ include file="include/footer.jsp" %>
 </body>
 </html>

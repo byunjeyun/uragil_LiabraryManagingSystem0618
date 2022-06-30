@@ -17,7 +17,7 @@
 <body>
 <%@ include file="include/header.jsp" %>
 <h2 align="center">Uragil 도서 관리시스템 웹에 방문해 주셔서 감사합니다.</h2> <br>
-<h3 align="center">로그인 후 이용해 주세요</h3>
+
 <center>	
 		<table width="70%" border="0" cellspacing="0" cellpadding="10">
 		<tr height="530">
@@ -28,32 +28,32 @@
 				
 			<tr align="center">
 				<td class="board01" colspan="2" >
-				<span class="content05">로그인</span><br><br>
+				<span class="content05">도서관리시스템 사용을 위해<br> 로그인 해주세요</span><br><br>
 				</td>
 			</tr>
 				
 				<tr align="right" >
 					<td>
-						<span class="text01"> ID :</span>
+						
 					</td>
 					<td>
-						<input type="text" name="mid">
+						
 					</td>
 				</tr>
 				
 				<tr align="right">
 					<td>
-							<span class="text01">PW :</span>
+						
 					</td>
 					<td>
-						<input  type="password" name="mpw">
+						
 					</td>
 					
 				</tr>
 				
 				<tr>
 					<td colspan="2"  align="right">
-						<input class="button01" type="submit" value="로그인">
+						<input class="button01" type="button" value="로그인" onclick="location.href='login'">
 					</td>
 				</tr>
 				<tr>	
@@ -68,8 +68,8 @@
 				</tr>
 			</table>
 		</form>
-			
 	
 	</center>
+	<%@ include file="include/footer.jsp" %>
 </body>
 </html>

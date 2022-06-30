@@ -56,7 +56,7 @@
 							</tr>
 							
 							<c:forEach items="${b_list }" var="bdto">
-							<tr class="board02" align="center">
+							<tr class="" align="center">
 								<td  class="board02">${bdto.bcode}</td>
 								<%
 								String id=(String)session.getAttribute("id");
@@ -100,6 +100,7 @@
 								String id=(String)session.getAttribute("id");
 								if(id.equals("admin")){
 								%>
+								<hr>
 								<input class="button07" type="button" value="도서입력" onclick="location.href='book_input'">&nbsp;&nbsp;
 								<input class="button03" type="button" value="대출열람" onclick="location.href='br_list'">&nbsp;&nbsp;
 								<input class="button03" type="button" value="홈으로" onclick="location.href='home'">
@@ -120,6 +121,6 @@
 		</tr>
 	</table>
 	</center>
-	
+<%@ include file="include/footer.jsp" %>	
 </body>
 </html>

@@ -17,7 +17,9 @@ public interface IDao {
 	public MemberDto loginInfoDao(String mid);
 	public ArrayList<MemberDto> m_listDao();
 	public void infoM(String mpw, String mname, String mphone, String mid);
-
+	public void deleteMemDao(String mid);
+	
+	
 	//bookDao
 	public ArrayList<BookDto> b_listDao();//리스트 가져오기
 
@@ -31,9 +33,8 @@ public interface IDao {
 	public void bookModifyDao(String bcode, String bname, String bcategori, String bwriter);
 	
 	
-	//	
-//	
-//	//brDao
+
+	//brDao
 	public ArrayList<BorrowDto> br_listDao();//리스트 가져오기
 	
 	public ArrayList<BorrowDto> IdSearchlistDao(String keyword);

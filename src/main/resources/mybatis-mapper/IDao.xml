@@ -31,6 +31,9 @@
 		UPDATE b_member SET mpw=#{param1}, mname=#{param2}, mphone=#{param3} WHERE mid=#{param4} 	
 	</update>
 
+	<delete id="deleteMemDao">
+		DELETE FROM b_member WHERE mid = #{param1}	
+	</delete>
 
 
 

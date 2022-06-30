@@ -65,7 +65,7 @@
 												
 						<tr>
 							<td colspan="2" align="right">
-								<input class="button04" type="button" value="수정내용 입력" onclick="inputCheck()">
+								<input class="button01" type="button" value="수정내용 입력" onclick="inputCheck()">
 							</td>
 						</tr>
 						<tr>
@@ -83,7 +83,7 @@
 		</tr>
 	</table>
 	</center>
-	
+<%@ include file="include/footer.jsp" %>	
 
 </body>
 </html>

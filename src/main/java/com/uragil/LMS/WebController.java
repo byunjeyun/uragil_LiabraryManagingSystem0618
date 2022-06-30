@@ -205,7 +205,20 @@ public class WebController {
 		return "infoModifyOk";
 	}
 	
-
+	@RequestMapping(value = "/deleteMem")
+	public String deleteMem(HttpServletRequest request) {
+		
+		String mid = request.getParameter("mid");
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		dao.deleteMemDao(mid);
+		
+		
+		return "redirect:logout";	
+	}
+	
+	
 	@RequestMapping(value ="/book_list")
 	public String book_list(HttpServletRequest request,  Model model) {
 		

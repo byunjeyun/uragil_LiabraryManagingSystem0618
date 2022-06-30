@@ -52,7 +52,7 @@
 						
 						<tr>
 							<td colspan="2"  align="right">
-								<input class="button04" type="button" value="대출정보 입력" onclick="brinputCheck()">	
+								<input class="button01" type="button" value="대출정보 입력" onclick="brinputCheck()">	
 								
 							</td>
 						</tr>
@@ -60,7 +60,7 @@
 							<td colspan="2"  align="right">
 								<input class="button03" type="button" value="도서정보" onclick="location.href='book_list'">
 								<input class="button03" type="button" value="대출정보" onclick="location.href='br_list'">
-								<input class="button03" type="button" value="대출정보" onclick="location.href='br_list'">
+								<input class="button03" type="button" value="HOME" onclick="location.href='home'">
 								
 							</td>
 						</tr>
@@ -72,6 +72,6 @@
 		</tr>
 	</table>
 	</center>
-	
+<%@ include file="include/footer.jsp" %>	
 </body>
 </html>

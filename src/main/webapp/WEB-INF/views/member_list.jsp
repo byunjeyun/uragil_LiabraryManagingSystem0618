@@ -51,8 +51,7 @@
 								<th >회원ID</th>
 								<th >회원명</th>
 								<th >연락처</th>
-								<th >대출상태</th>
-								<th >반납예정일</th>
+								
 							</tr>
 							
 							<c:forEach items="${m_list }" var="mdto">
@@ -60,19 +59,15 @@
 								<td  class="board02">${mdto.mid}</td>
 								<td  class="board02">${mdto.mname}</td>
 								<td  class="board02">${mdto.mphone }</td>
-								
-								<c:if test="${bdto.bstate !=null}">
-								<td  class="board04">${mdto.bstate }</td>
-								</c:if>
-															          
+														          
 							</c:forEach>
 							</tr>
 							<tr><td> </td></tr>
 							<tr >
 							<td colspan="6"  align="right">
-								<input class="button03" type="button" value="정보수정" onclick="location.href='book_input'">&nbsp;&nbsp;
 								
-								<input class="button03" type="button" value="홈으로" onclick="location.href='index'">
+								
+								<input class="button03" type="button" value="홈으로" onclick="location.href='home'">
 							</td>
 						</tr>				
 
@@ -82,6 +77,6 @@
 		</tr>
 	</table>
 	</center>
-	
+	<%@ include file="include/footer.jsp" %>
 </body>
 </html>

@@ -49,7 +49,7 @@
 								<td >대출일</td>
 								<td >반납예정일</td>
 								<td >반납상태</td>
-								
+								<td > </td>
 							</tr>
 							<c:forEach items="${br_list}" var="brdto">
 							<tr>
@@ -65,7 +65,7 @@
 								<c:out value="${fn:substring(brdto.rdate,2,11)}"/>
 								</td>
 								
-								<td class="board02">${brdto.bstate}</td>
+								<td class="board03">${brdto.bstate}</td>
 								
 								<%
 								String id=(String)session.getAttribute("id");
@@ -95,7 +95,7 @@
 							<tr>
 							<td colspan="7"  align="right">
 
-								
+
 								<%
 								String id=(String)session.getAttribute("id");
 								if(id.equals("admin")){
@@ -114,6 +114,6 @@
 		</tr>
 	</table>
 	</center>
-
+<%@ include file="include/footer.jsp" %>
 </body>
 </html>

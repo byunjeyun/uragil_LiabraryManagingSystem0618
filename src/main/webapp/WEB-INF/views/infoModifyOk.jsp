@@ -79,5 +79,6 @@
 		</tr>
 	</table>
 	</center>
+	<%@ include file="include/footer.jsp" %>
 </body>
 </html>

@@ -19,8 +19,8 @@
 	<%@ include file="include/header.jsp" %>
 
 	<center>	
-	<table width="70%" border="0" cellspacing="0" cellpadding="10">
-		<tr height="530">
+	<table width="70%" border="0" cellspacing="0" cellpadding="0">
+		<tr height="300">
 			<td bgcolor="#bbb" align="center" height="500">
 				<form action="book_inputOk" method="get" name="breg_frm">
 				<table>
@@ -62,14 +62,14 @@
 												
 						<tr>
 							<td colspan="2" align="right">
-								<input class="button04" type="button" value="도서정보 입력" onclick="inputCheck()">
+								<input class="button01" type="button" value="도서정보 입력" onclick="inputCheck()">
 							</td>
 						</tr>
 						<tr>
 							<td colspan="2" align="right">
 								<input class="button03" type="button" value="도서정보" onclick="location.href='book_list'">
 								<input class="button03" type="button" value="대출정보" onclick="location.href='br_list'">
-								<input class="button03" type="button" value="도서정보" onclick="location.href='book_list'">
+								<input class="button03" type="button" value="HOME" onclick="location.href='home'">
 							</td>
 						</tr>					
 
@@ -80,7 +80,7 @@
 		</tr>
 	</table>
 	</center>
-	
+<%@ include file="include/footer.jsp" %>	
 
 </body>
 </html>
