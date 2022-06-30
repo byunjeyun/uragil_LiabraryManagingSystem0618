@@ -72,7 +72,7 @@
 							<tr >
 							<td colspan="6"  align="right">
 								<input class="button03" type="button" value="정보수정" onclick="location.href='book_input'">&nbsp;&nbsp;
-								<input class="button03" type="button" value="대출열람" onclick="location.href='br_list'">&nbsp;&nbsp;	
+								
 								<input class="button03" type="button" value="홈으로" onclick="location.href='index'">
 							</td>
 						</tr>				

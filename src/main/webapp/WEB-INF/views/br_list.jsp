@@ -41,7 +41,6 @@
 							</tr>
 								
 						</form>
-						
 													
 							<tr class="board01" >
 								<td >대출코드</td>
@@ -50,7 +49,7 @@
 								<td >대출일</td>
 								<td >반납예정일</td>
 								<td >반납상태</td>
-								<td >반납버튼</td>
+								
 							</tr>
 							<c:forEach items="${br_list}" var="brdto">
 							<tr>
@@ -68,16 +67,18 @@
 								
 								<td class="board02">${brdto.bstate}</td>
 								
-								
-								
+								<%
+								String id=(String)session.getAttribute("id");
+								if(id.equals("admin")){
+								%>
 								<c:if test="${brdto.rdate == null}">
 								<td colspan="5" align="right">
 									<input class="button06" type="button" value="반납완료" >
 								</td>
 								</c:if>
-								
 								<c:if test="${brdto.rdate != null}">
 								<td colspan="5" align="right">
+								
 								<form action='br_update?brcode=${brdto.brcode}'> 
 									<input type="hidden" name= "brcode" value="${brdto.brcode}">
 									<input type="hidden" name= "brbcode" value="${brdto.brbcode}">
@@ -86,6 +87,10 @@
 								
 								</td>
 								</c:if>
+								<%
+								}
+								%>								
+								
 								
 								
 							</tr>

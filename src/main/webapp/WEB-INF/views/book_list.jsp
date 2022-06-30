@@ -58,7 +58,19 @@
 							<c:forEach items="${b_list }" var="bdto">
 							<tr class="board02" align="center">
 								<td  class="board02">${bdto.bcode}</td>
+								<%
+								String id=(String)session.getAttribute("id");
+								if(id.equals("admin")){
+								%>
 								<td  class="board03"><a href="b_modifyView?bcode=${bdto.bcode }">${bdto.bname}</a></td>
+								<%
+								} else{
+									%>
+									<td  class="board03">${bdto.bname}</a></td>
+								<%
+								}
+								%>
+								
 								
 								<td  class="board02">${bdto.bcategori}</td>
 								<td  class="board02">${bdto.bwriter }</td>
@@ -90,12 +102,16 @@
 								if(id.equals("admin")){
 								%>
 								<input class="button07" type="button" value="도서입력" onclick="location.href='book_input'">&nbsp;&nbsp;
+								<input class="button03" type="button" value="대출열람" onclick="location.href='br_list'">&nbsp;&nbsp;
+								<input class="button03" type="button" value="홈으로" onclick="location.href='home'">
+								<%
+								}else{
+								%>
+								<input class="button03" type="button" value="대출열람" onclick="location.href='mbr_list'">&nbsp;&nbsp;
+								<input class="button03" type="button" value="홈으로" onclick="location.href='home'">	
 								<%
 								}
 								%>
-								
-								<input class="button03" type="button" value="대출열람" onclick="location.href='br_list'">&nbsp;&nbsp;	
-								<input class="button03" type="button" value="홈으로" onclick="location.href='home'">
 							</td>
 						</tr>				
 

@@ -173,6 +173,38 @@ public class WebController {
 		
 		
 	}
+	
+	
+	@RequestMapping(value = "/infoModify")
+	public String infoModify(HttpServletRequest request, Model model) {
+		
+		HttpSession session = request.getSession();
+		
+		String sessionId = (String) session.getAttribute("id");
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		MemberDto memberDto = dao.loginInfoDao(sessionId);
+		
+		model.addAttribute("memberDto", memberDto);		
+		
+		return "infoModify";
+	}
+	
+	@RequestMapping(value = "/infoModifyOk")
+	public String infoModifyOk(HttpServletRequest request, Model model) {
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		dao.infoM(request.getParameter("mpw"), request.getParameter("mname"), request.getParameter("mphone"), request.getParameter("mid"));
+		
+		MemberDto memberDto = dao.loginInfoDao(request.getParameter("mid"));
+		
+		model.addAttribute("memberDto", memberDto);
+		
+		return "infoModifyOk";
+	}
+	
 
 	@RequestMapping(value ="/book_list")
 	public String book_list(HttpServletRequest request,  Model model) {
@@ -272,8 +304,38 @@ public class WebController {
 		return "br_list";
 		
 	}
-//	
-//	
+	
+	@RequestMapping(value ="/mbr_list")
+	public String mbr_list(HttpServletRequest request, Model model) {
+
+		
+		String searchKeyword = request.getParameter("searchKeyword");
+		String searchOption = request.getParameter("searchOption");
+		
+		HttpSession session = request.getSession();
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		
+		String sessionId = (String) session.getAttribute("id");
+		
+		
+		String mid = sessionId;
+		
+		ArrayList<BorrowDto> brDtos = dao.IdSearchlistDao(mid);
+		
+		
+		
+		
+				//제목에서 특정 키워드 검색한 결과
+		
+						
+		model.addAttribute("br_list", brDtos);
+		
+		return "br_list";
+		
+	}
+	
+	
 	@RequestMapping(value="/br_input")
 	public String br_input() {
 		

@@ -61,7 +61,7 @@
 			<td    align="center"><td>
 		</tr>
 		<tr>
-			<td   align="center"> <a href="br_list" style="color:white;">2. 대출정보 열람</a><td>
+			<td   align="center"> <a href="mbr_list" style="color:white;">2. 대출정보 열람</a><td>
 		</tr>
 		
 		<tr>
@@ -69,7 +69,7 @@
 		</tr>
 		
 		<tr>
-			<td align="center" > <a href="member_list" style="color:white;">3. 회원정보 수정</a></td>
+			<td align="center" > <a href="infoModify?brmid=${id }" style="color:white;">3. 회원정보 수정</a></td>
 		</tr>
 		<%
 		}

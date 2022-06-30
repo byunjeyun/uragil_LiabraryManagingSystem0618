@@ -16,13 +16,12 @@ public interface IDao {
 	public int checkPwDao(String mid, String mpw);
 	public MemberDto loginInfoDao(String mid);
 	public ArrayList<MemberDto> m_listDao();
-
+	public void infoM(String mpw, String mname, String mphone, String mid);
 
 	//bookDao
 	public ArrayList<BookDto> b_listDao();//리스트 가져오기
 
 	public void b_inputDao(String bname, String bcategori, String bwriter);
-	public ArrayList<BorrowDto> br_listDao2(String brbcode);//리스트 가져오기
 	public void bstateDao();
 	
 	public ArrayList<BookDto> TitleSearchlistDao(String keyword);
@@ -36,6 +35,7 @@ public interface IDao {
 //	
 //	//brDao
 	public ArrayList<BorrowDto> br_listDao();//리스트 가져오기
+	public ArrayList<BorrowDto> mbr_listDao(String brmid);//리스트 가져오기
 	public ArrayList<BorrowDto> IdSearchlistDao(String keyword);
 	public void br_inputDao(String brbcode, String brmid);
 	
