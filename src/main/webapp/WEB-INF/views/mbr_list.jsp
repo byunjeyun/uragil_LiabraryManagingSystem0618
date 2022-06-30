@@ -67,6 +67,7 @@
 								
 								<td class="board02">${brdto.bstate}</td>
 								
+								
 								<%
 								String id=(String)session.getAttribute("id");
 								if(id.equals("admin")){

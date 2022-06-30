@@ -95,7 +95,6 @@
 							</c:forEach>
 							</tr>
 							<tr >
-							
 							<td colspan="6"  align="right">
 								<%
 								String id=(String)session.getAttribute("id");

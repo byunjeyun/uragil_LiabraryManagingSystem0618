@@ -65,7 +65,7 @@
 									<span class="text01">PHONE :</span>
 							</td>
 							<td>
-								<input  type="text" name="mphone" value="${memberDto.mphone }">
+								<input  type="text" name="mphone" value="${memberDto.mphone}">
 							</td>
 						</tr>
 						<tr>

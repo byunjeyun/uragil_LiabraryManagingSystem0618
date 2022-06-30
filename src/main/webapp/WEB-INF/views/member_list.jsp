@@ -64,7 +64,6 @@
 								<c:if test="${bdto.bstate !=null}">
 								<td  class="board04">${mdto.bstate }</td>
 								</c:if>
-								
 															          
 							</c:forEach>
 							</tr>

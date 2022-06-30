@@ -65,9 +65,6 @@
 								<span class="text02">${memberDto.mphone }</span>
 							</td>
 						</tr>
-						
-						
-						
 						<tr>
 							<td colspan="2"  align="right">
 									

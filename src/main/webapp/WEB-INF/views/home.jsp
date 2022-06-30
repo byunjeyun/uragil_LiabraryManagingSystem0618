@@ -27,7 +27,6 @@
 				<td class="board01" colspan="2" >
 				<span class="content05">Uragil 도서관리시스템</span><br><br>
 				</td>
-		
 		<%
 			String id=(String)session.getAttribute("id");
 			if(id.equals("admin")){
