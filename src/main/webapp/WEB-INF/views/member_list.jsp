@@ -56,7 +56,7 @@
 							
 							<c:forEach items="${m_list }" var="mdto">
 							<tr class="board02" align="center">
-								<td  class="board02">${mdto.mid}</td>
+								<td  class="board03">${mdto.mid}</td>
 								<td  class="board02">${mdto.mname}</td>
 								<td  class="board02">${mdto.mphone }</td>
 														          

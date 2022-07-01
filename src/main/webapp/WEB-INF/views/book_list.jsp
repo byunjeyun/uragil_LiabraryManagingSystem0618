@@ -41,7 +41,7 @@
             						<option value="categori">장르</option>
             						<option value="writer">저자</option>
           						</select> 
-							      <input type="text" name="searchKeyword">
+							      <input type="text" name="searchKeyword" >
 							      <input type="submit" value="검색">
 							   </td>
 							   </form>

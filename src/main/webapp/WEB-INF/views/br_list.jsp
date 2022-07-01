@@ -34,9 +34,23 @@
 								<td colspan="5" align="right">
 								<select name="searchOption">
            							<option value="brmid">아이디</option>
-          						</select> 
-							      <input type="text" name="searchKeyword">
-							      <input type="submit" value="검색">
+          						</select>
+									
+          						<%
+								String id=(String)session.getAttribute("id");
+								if(id.equals("admin")){
+								%>
+									<input type="text" name="searchKeyword" >
+									<input type="submit" value="검색">
+							    <%
+							    } else {
+						    	%>
+							    	${id}님의 대출정보 
+						    	<%
+						    	}
+						    	%>
+
+							      
 							   </td>
 							</tr>
 								
@@ -55,7 +69,7 @@
 							<tr>
 								<td class="board02">${brdto.brcode}</td>
 								<td class="board02">${brdto.brbcode}</td>
-								<td class="board02">${brdto.brmid}</td>
+								<td class="board03">${brdto.brmid}</td>
 								
 								<td class="board02">
 								<c:out value="${fn:substring(brdto.sdate,2,11)}"/>
@@ -68,7 +82,7 @@
 								<td class="board03">${brdto.bstate}</td>
 								
 								<%
-								String id=(String)session.getAttribute("id");
+								
 								if(id.equals("admin")){
 								%>
 								<c:if test="${brdto.rdate == null}">
@@ -97,7 +111,7 @@
 
 
 								<%
-								String id=(String)session.getAttribute("id");
+								
 								if(id.equals("admin")){
 								%>
 								<input class="button07" type="button" value="대출입력" onclick="location.href='br_input'">&nbsp;&nbsp;

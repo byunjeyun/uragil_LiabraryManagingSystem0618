@@ -42,10 +42,10 @@
 		SELECT * FROM b_book ORDER BY bname ASC
 	</select>
 
-	<select id="br_listDao2" resultType="com.uragil.LMS.dto.BorrowDto">
+<!-- <select id="br_listDao2" resultType="com.uragil.LMS.dto.BorrowDto">
 		SELECT rdate FROM b_borrow where brbcode=#{param1}
 	</select>
-
+-->
 	<select id="TitleSearchlistDao" resultType="com.uragil.LMS.dto.BookDto">
 		SELECT * FROM b_book WHERE bname LIKE '%'|| #{param1} ||'%' ORDER BY bcode DESC  
 	</select>
@@ -82,8 +82,9 @@
 	</select>
 	
 	<select id="IdSearchlistDao" resultType="com.uragil.LMS.dto.BorrowDto">
-		SELECT * FROM b_borrow WHERE brmid LIKE '%'|| #{param1} ||'%' ORDER BY brmid DESC  
-	</select>
+		SELECT * FROM b_borrow WHERE brmid LIKE '%'|| #{param1} ||'%' ORDER BY brmid DESC, sdate DESC  
+	</select>    
+
 	
 	<insert id="br_inputDao">
 		INSERT INTO b_borrow(brcode, brbcode, brmid) VALUES(b_borrow_seq.nextval, #{param1}, #{param2})
