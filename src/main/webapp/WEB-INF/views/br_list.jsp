@@ -87,6 +87,7 @@
 								%>
 								<c:if test="${brdto.rdate == null}">
 								<td colspan="5" align="right">
+								
 									<input class="button06" type="button" value="반납완료" >
 								</td>
 								</c:if>
@@ -108,16 +109,18 @@
 							</c:forEach>
 							<tr>
 							<td colspan="7"  align="right">
-
+								<hr>	
 
 								<%
 								
 								if(id.equals("admin")){
 								%>
+								
 								<input class="button07" type="button" value="대출입력" onclick="location.href='br_input'">&nbsp;&nbsp;
 								<%
 								}
 								%>
+								
 								<input class="button03" type="button" value="도서열람" onclick="location.href='book_list'">&nbsp;&nbsp;	
 								<input class="button03"type="button" value="홈으로" onclick="location.href='home'">
 							</td>
