@@ -19,9 +19,9 @@
 <h2 align="center">Uragil 도서 관리시스템 웹에 방문해 주셔서 감사합니다.</h2> <br>
 
 <center>	
-		<table width="70%" border="0" cellspacing="0" cellpadding="10">
-		<tr height="530">
-			<td bgcolor="#bbbbbb" align="center" height="500" >
+		<table width="600" border="0" cellspacing="0" cellpadding="10">
+		<tr height="450">
+			<td style="background-image:url('${pageContext.request.contextPath }/resources/img/open-book.jpg'); " align="center" height="400" >
 		<form action="loginOk" method="post">
 			<table bgcolor="#112" height="120" width="300" cellspacing="10px">
 				
