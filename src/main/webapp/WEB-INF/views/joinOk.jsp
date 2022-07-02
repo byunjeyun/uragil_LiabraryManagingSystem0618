@@ -7,6 +7,8 @@
 
 <script type="text/javascript" src="${pageContext.request.contextPath }/resources/js/join.js"></script>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/member.css?after">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/main.css?after">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/menu.css?after">
 <title>Insert title here</title>
 </head>
 <body>
@@ -16,7 +18,7 @@
 	<center>	
 	<table width="70%" border="0" cellspacing="0" cellpadding="20">
 		<tr height="500">
-			<td bgcolor="d5d5d5" align="center">
+			<td bgcolor="#cba" align="center">
 				<%
 					int checkId = Integer.parseInt(request.getAttribute("checkId").toString());
 					if(checkId == 1) {

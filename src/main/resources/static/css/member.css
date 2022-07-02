@@ -66,14 +66,14 @@ input.button01:hover {
 
 input.button02{
 	
-	background-color: #ff80c0;
+	background-color: rgb(128, 64, 0);
 	width : 90px;
-	border:2px solid pink;
+	border:2px solid #d5c1a6;
 	border-radius :6px;
 	padding: 3px;
 	font-size: 12px;
 	font-weight: bold;
-	color: #111;
+	color: #fff;
 	font-family: malgun;
 	transition-duration: 0.4s;
 	cursor: pointer;
@@ -81,7 +81,7 @@ input.button02{
 
 input.button02:hover {
   border:2px solid #ffffff;
-  background-color: #ff0080;
+  background-color: #fa0;
   color: white;
 }
 
@@ -89,7 +89,7 @@ input.button02:hover {
 input.button03{
 	width : 89px;
 	border:2px solid #ccf;
-	background-color: #ddd;
+	background-color: #ddf;
 	border-radius :6px;
 	padding: 3px;
 	font-size: 12px;
@@ -180,12 +180,12 @@ input.button06:hover {
 input.button07{
 	width : 89px;
 	border:2px solid #ccf;
-	background-color: #bbf0b7;
+	background-color: #00aa30;
 	border-radius:6px;
 	padding: 3px;
 	font-size: 12px;
 	font-weight: bold;
-	color:#000000;
+	color:#fff;
 	font-family: malgun;
 	transition-duration: 0.4s;
 	cursor: pointer;

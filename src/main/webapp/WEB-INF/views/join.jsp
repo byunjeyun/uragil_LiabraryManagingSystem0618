@@ -18,14 +18,14 @@
 <center>	
 	<table width="70%" border="0" cellspacing="0" cellpadding="10">
 		<tr height="530">
-			<td bgcolor="#bbbbbb" align="center" height="500">
+			<td bgcolor="#cba" align="center" height="500">
 
 				<form action="joinOk" method="post" name="reg_frm">
-					<table bgcolor="#112" height="120" width="300" cellspacing="10px">
+					<table bgcolor="#210" height="120" width="300" cellspacing="10px">
 						<form action="joinOk" method="post" name="reg_frm">				
-						<tr align="center">
-							<td class="board01" colspan="2" >
-							<span class="content05">회원가입</span><br><br>
+						<tr align="center" height="50">
+							<td class="board_br" colspan="2" >
+							<span class="content07">회원가입</span>
 							</td>
 						</tr>
 						

@@ -4,7 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>로그인 성공</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/member.css?after">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/main.css?after">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/menu.css?after">
+
 
 </head>
 
@@ -16,7 +20,7 @@
 	<center>	
 		<table width="70%" border="0" cellspacing="0" cellpadding="20">
 			<tr height="500">
-				<td bgcolor="d5d5d5" align="center">
+				<td bgcolor="#cba" align="center">
 					<%
 						int checkId = Integer.parseInt(request.getAttribute("checkId").toString());
 						int checkPw = Integer.parseInt(request.getAttribute("checkPw").toString());
@@ -43,10 +47,10 @@
 						 
 					%>
 											
-					<span class="content01"> 
+					
 					${mname } 님 안녕하세요
-					${mid} ID로 로그인에 성공하셨습니다.			 
-					</span>
+					<span class="text03">${mid}</span> ID로 로그인에 성공하셨습니다.			 
+					
 					<hr>
 					<input class="button03" type="button" value="홈으로" onclick="location.href='home'">
 					

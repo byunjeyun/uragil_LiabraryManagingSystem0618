@@ -26,7 +26,7 @@
 			<%
 			}else{
 			%>
-			<a href="/home" style="color:#fff;">HOME</a></td>
+			<a href="/home" >HOME</a></td>
 			<%
 			}
 			%>
@@ -36,11 +36,11 @@
 			<%
 				if(sessionValid == null){
 			%>
-			<a href="/login" style="color:#fff;">LOG-IN</a>
+			<a href="/login"  >LOG-IN</a>
 			<%
 			}else{
 			%>
-			<a href="logout" style="color:#fff;">LOGOUT</a></td>
+			<a href="logout"  >LOGOUT</a></td>
 			<%
 			}
 			%>
@@ -49,11 +49,11 @@
 			<%
 				if(sessionValid == null){
 			%>
-			<a href="join" style="color:#fff;">JOIN</a>
+			<a href="join"  >JOIN</a>
 			<%
 			}else{
 			%>
-			<a href="infoModify" style="color:#fff;">MODIFY</td>
+			<a href="infoModify"  >MODIFY</td>
 			<%
 			}
 			%>

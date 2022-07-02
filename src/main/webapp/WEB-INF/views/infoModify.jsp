@@ -22,11 +22,11 @@
  
 				
 				<form action="infoModifyOk" method="post" name="reg_frm">
-					<table bgcolor="#112" height="120" width="300" cellspacing="10px">
+					<table bgcolor="#210" height="120" width="300" cellspacing="10px">
 										
-						<tr align="center">
-							<td class="board01" colspan="2" >
-							<span class="content05">회원정보 수정</span><br><br>
+						<tr align="center" height="50">
+							<td class="board_br" colspan="2" >
+							<span class="content07">회원정보 수정</span>
 							</td>
 						</tr>
 						<tr align="right" >
@@ -74,10 +74,11 @@
 							</td>
 						</tr>
 						<tr>
-							<td colspan="2"  align="right">
-								<input class="button02" type="button" value="회원탈퇴" onclick="location.href='deleteMem?mid=${memberDto.mid}'">&nbsp;&nbsp;
+							<td align="left">
+							<input class="button02" type="button" value="회원탈퇴" onclick="location.href='deleteMem?mid=${memberDto.mid}'">
+							</td> 
+							<td   align="right">
 								<input class="button03" type="button" value="수정취소" onclick="location.href='home'">
-								
 							</td>
 						</tr>
 						</form>											

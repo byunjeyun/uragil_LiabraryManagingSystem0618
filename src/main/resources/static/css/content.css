@@ -33,8 +33,17 @@ span.content04{
 }
 
 span.content05{
-	font-size: 16px;
-	color: #1c7;
+	font-size: 18px;
+	color: #421;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align:center;
+	
+}
+
+span.content06{
+	font-size: 18px;
+	color: lime;
 	font-family: sans-serif;
 	font-weight: bold;
 	text-align:center;

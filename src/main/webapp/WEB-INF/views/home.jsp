@@ -10,20 +10,20 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/member.css?after">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/header.css?after">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/board.css?after">
-<title>Insert title here</title>
+<title>UragilLMSW_메인</title>
 </head>
 
 
 <body>
 <%@ include file="include/header.jsp" %>
 	<center>
-	<table width="70%" border="0" cellspacing="0" cellpadding="5">
+	<table width="70%" border="0" cellspacing="0" cellpadding="0">
 		<tr height="530">
 			<td bgcolor="#fff" align="center" height="500">
 			
-	<table bgcolor="#fff" height="120" width="700" cellspacing="5px">
+	<table bgcolor="#fff" height="120" width="700" cellspacing="0px">
 		
-			<tr align="center">
+			<tr align="center" height="50">
 				
 			
 				
@@ -32,45 +32,50 @@
 			String id=(String)session.getAttribute("id");
 			if(id.equals("admin")){
 		%>
-			<td class="board07" colspan="2" >
-				<span class="">Uragil 도서관리시스템</span>
+			<td class="board_br" colspan="2" >
+				<span class="content06">Uragil 도서관리시스템</span>
 				</td>
+			</tr>
+			
+			
+			
 			<tr>
-			<td class="board08" align="center"> <a href="book_input" style="color:green;" width="250">1.도서정보 입력</a></td>
-			<td rowspan="6" bgcolor="#232"><img align="middle" alt="" src="${pageContext.request.contextPath }/resources/img/open-book.jpg" width="500"> </td>
+			<td class="board_br" align="center"> <a href="book_input" style="color:white;" width="250">1.도서정보 입력</a></td>
+			<td rowspan="6" bgcolor="#210"><img align="middle" alt="" src="${pageContext.request.contextPath }/resources/img/open-book.jpg" width="500"> </td>
 			
 		</tr>
 		
 		<tr>
-			<td class="board08"  align="center"> <a href="book_list" style="color:green;">2. 도서정보 열람</a><td>
+			<td class="board_br"  align="center"> <a href="book_list" style="color:white;">2. 도서정보 열람</a><td>
 		</tr>
 		<tr>
-			<td class="board08" align="center"> <a href="br_input" style="color:green;">3. 대출정보 입력</a></td>
-		</tr>
-		
-		<tr>
-			<td class="board08" align="center"> <a href="br_list" style="color:green;">4. 대출정보 열람</a><td>
+			<td class="board_br" align="center"> <a href="br_input" style="color:white;">3. 대출정보 입력</a></td>
 		</tr>
 		
 		<tr>
-			<td class="board08" align="center" > <a href="member_list" style="color:green;">5. 회원정보 열람</a></td>
+			<td class="board_br" align="center"> <a href="br_list" style="color:white;">4. 대출정보 열람</a><td>
+		</tr>
+		
+		<tr>
+			<td class="board_br" align="center" > <a href="member_list" style="color:white;">5. 회원정보 열람</a></td>
 		</tr>
 		<%
 		} else{
 		%>
-			<td class="board07" colspan="3" >
-				<span class="">Uragil 도서관리시스템</span>
-			</td>
+			<td class="board_br" colspan="3" >
+				<span class="content06">Uragil 도서관리시스템</span>
+				</td>
+			</tr>
 		<tr>
-			<td class="board08"  align="center"> <a href="book_list" style="color:green;">1. 도서정보 열람</a><td>
-			<td rowspan="6" bgcolor="#232"><img align="middle" alt="" src="${pageContext.request.contextPath }/resources/img/open-book.jpg" width="500"> </td>
+			<td class="board_br"  align="center"> <a href="book_list" style="color:white;">1. 도서정보 열람</a><td>
+			<td rowspan="6" bgcolor="#210"><img align="middle" alt="" src="${pageContext.request.contextPath }/resources/img/open-book.jpg" width="500"> </td>
 		</tr>
 		
 		<tr>
 			<td    align="center"><td>
 		</tr>
 		<tr>
-			<td class="board08"  align="center"> <a href="mbr_list" style="color:green;">2. 대출정보 열람</a><td>
+			<td class="board_br"  align="center"> <a href="mbr_list" style="color:white;">2. 대출정보 열람</a><td>
 		</tr>
 		
 		<tr>
@@ -78,7 +83,7 @@
 		</tr>
 		
 		<tr>
-			<td class="board08" align="center" > <a href="infoModify?brmid=${id }" style="color:green;">3. 회원정보 수정</a></td>
+			<td class="board_br" align="center" > <a href="infoModify?brmid=${id }" style="color:white;">3. 회원정보 수정</a></td>
 		</tr>
 		<%
 		}
