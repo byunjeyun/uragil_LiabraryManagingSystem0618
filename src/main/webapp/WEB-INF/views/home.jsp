@@ -17,23 +17,27 @@
 <body>
 <%@ include file="include/header.jsp" %>
 	<center>
-	<table width="70%" border="0" cellspacing="0" cellpadding="10">
+	<table width="70%" border="0" cellspacing="0" cellpadding="5">
 		<tr height="530">
 			<td bgcolor="#fff" align="center" height="500">
 			
-	<table bgcolor="#fff" height="120" width="250" cellspacing="10px">
+	<table bgcolor="#fff" height="120" width="700" cellspacing="5px">
 		
 			<tr align="center">
 				<td class="board07" colspan="2" >
 				<span class="">Uragil 도서관리시스템</span>
 				</td>
+			
+				
 		
 		<%
 			String id=(String)session.getAttribute("id");
 			if(id.equals("admin")){
 		%>
 			<tr>
-			<td class="board08" align="center"> <a href="book_input" style="color:green;">1.도서정보 입력</a></td>
+			<td class="board08" align="center"> <a href="book_input" style="color:green;" width="250">1.도서정보 입력</a></td>
+			<td rowspan="6" bgcolor="#232"><img align="middle" alt="" src="${pageContext.request.contextPath }/resources/img/open-book.jpg" width="500"> </td>
+			
 		</tr>
 		
 		<tr>

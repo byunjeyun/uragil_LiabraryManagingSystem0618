@@ -121,7 +121,7 @@ td.board06{
 
 td.board07{
 	
-	font-size: 16px;
+	font-size: 18px;
 	color:#fff;
 	font-family: inherit;
 	font-weight:bold;
@@ -137,14 +137,16 @@ td.board07{
 
 td.board08{
 	
-	font-size: 14px;
+	font-size: 16px;
 	font-family: inherit;
+	
 	border-color:#aaa;
 	border-bottom-style: solid;
 	border-radius:0px 0px 10px 10px;
 	border-width:2px;
 	padding:5px;
 	text-align:center;
+	font-weight: bold;
 	
 	
 }
