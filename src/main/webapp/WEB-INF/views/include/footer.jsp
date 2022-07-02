@@ -15,10 +15,10 @@
 		</tr>
 		
 		<tr >
-			<td class="footer01" align="center">Copyright ⓒ Uragil_Byun. All Rights Reserved</td>
+			<td class="footer01" align="center">Copyright ⓒ Uragil_jay. All Rights Reserved</td>
 		</tr>
 		<tr >
-			<td class="footer01"align="center">This homepage is built with Spring Framework. Made by Byunz. 
+			<td class="footer01"align="center">This 'Library Management System Web' is built with Spring Framework. Made by Byunz. 
 			</td>
 		</tr>
 		

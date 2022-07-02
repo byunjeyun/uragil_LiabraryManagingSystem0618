@@ -32,8 +32,8 @@
 			String id=(String)session.getAttribute("id");
 			if(id.equals("admin")){
 		%>
-			<td class="board_br" colspan="2" >
-				<span class="content06">Uragil 도서관리시스템</span>
+			<td class="board_br" colspan="2" height="60" >
+				<span class="content06" style="color:white;">Uragil 도서관리시스템</span>
 				</td>
 			</tr>
 			
@@ -62,7 +62,7 @@
 		<%
 		} else{
 		%>
-			<td class="board_br" colspan="3" >
+			<td class="board_br" colspan="3" height="60">
 				<span class="content06">Uragil 도서관리시스템</span>
 				</td>
 			</tr>

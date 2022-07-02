@@ -26,7 +26,7 @@
 			<%
 			}else{
 			%>
-			<a href="/home" >HOME</a></td>
+			<a href="home" >HOME</a></td>
 			<%
 			}
 			%>
@@ -36,7 +36,7 @@
 			<%
 				if(sessionValid == null){
 			%>
-			<a href="/login"  >LOG-IN</a>
+			<a href="login"  >LOG-IN</a>
 			<%
 			}else{
 			%>

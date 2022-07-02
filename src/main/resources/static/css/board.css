@@ -161,12 +161,13 @@ td.board_br{
 	font-weight:bold;
 	border-bottom-style: solid;
 	border-radius:10px 0 10px 0px;
-	border-color: #ffffff;
+	border-color: lime;
+	
 	background-image: linear-gradient(to right, #160800, #403000);	
 	background-color: #420;
 	text-align: center;
 	
-	border-width: 1px;
+	border-width: 3px;
 	
 }
 
