@@ -31,21 +31,39 @@ public class WebController {
 	
 	
 	@RequestMapping(value="/")
-	public String main() {
-		
+	public String main(Model model) {
+		IDao dao = sqlSession.getMapper(IDao.class);
+		ArrayList<BookDto> bDtos = dao.b_listDao();
+
+		model.addAttribute("book01", bDtos.get(0));
+		model.addAttribute("book02", bDtos.get(1));
+		model.addAttribute("book03", bDtos.get(2));	
 		return "index";
 			
 		}
 	
 	@RequestMapping(value="/home")
-	public String home() {
-		
+	public String home(Model model) {
+		IDao dao = sqlSession.getMapper(IDao.class);
+		ArrayList<BookDto> bDtos = dao.b_listDao();
+
+		model.addAttribute("book01", bDtos.get(0));
+		model.addAttribute("book02", bDtos.get(1));
+		model.addAttribute("book03", bDtos.get(2));
+			
 		return "home";
 			
 		}
 	
 	@RequestMapping(value="/index")
-	public String index() {
+	public String index(Model model) {
+		IDao dao = sqlSession.getMapper(IDao.class);
+		ArrayList<BookDto> bDtos = dao.b_listDao();
+
+		model.addAttribute("book01", bDtos.get(0));
+		model.addAttribute("book02", bDtos.get(1));
+		model.addAttribute("book03", bDtos.get(2));
+		
 		
 		return "index";
 	}

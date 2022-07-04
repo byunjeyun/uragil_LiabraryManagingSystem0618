@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/member.css?after">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/header.css?after">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/board.css?after">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/aside.css?after">
 <title>UragilLMSW_메인</title>
 </head>
 
@@ -93,6 +94,49 @@
 			</td>
 		</tr>
 	</table>
+	
+			<aside>
+		<div  style="float: left; width: 280px;margin-left:5px; margin-top:5px">
+			<table width="280px" bgcolor="#432" color="blue">
+		      <ul>
+		      <tr class="board01">
+			    <th>신규 도서</th>
+			  </tr>
+			 <tr class="board02">
+			    <td>${book01.bname}</td>
+			    
+			  </tr>
+			  <tr class="board02">
+			    <td>${book02.bname}</td>
+			  </tr>
+			  <tr class="board02">
+			    <td>${book03.bname}</td>
+			  </tr>
+		    </ul>
+			</table>
+		</div>
+		
+		<div  style="float: right; width: 280px; margin-right:5px; margin-top:5px">
+			<table width="280px" bgcolor="darkgreen">
+			    <ul>
+			      <tr class="board02">
+			    <th >인기 도서</th>
+			  </tr>
+			  <tr class="board01">
+			    <td>${book01.bname}</td>
+			    
+			  </tr>
+			  <tr class="board01">
+			    <td>${book02.bname}</td>
+			  </tr>
+			 <tr class="board01">
+			    <td>${book03.bname}</td>
+			  </tr>
+			    </ul>
+			</table>
+		</div>
+		</aside>
+	
 	</center>
 	<%@ include file="include/footer.jsp" %>
 </body>

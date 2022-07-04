@@ -39,7 +39,7 @@
 
 <!-- book SQL -->
 	<select id="b_listDao" resultType="com.uragil.LMS.dto.BookDto">
-		SELECT * FROM b_book ORDER BY bname ASC
+		SELECT * FROM b_book ORDER BY bcode DESC
 	</select>
 
 <!-- <select id="br_listDao2" resultType="com.uragil.LMS.dto.BorrowDto">
@@ -47,15 +47,15 @@
 	</select>
 -->
 	<select id="TitleSearchlistDao" resultType="com.uragil.LMS.dto.BookDto">
-		SELECT * FROM b_book WHERE bname LIKE '%'|| #{param1} ||'%' ORDER BY bcode DESC  
+		SELECT * FROM b_book WHERE bname LIKE '%'|| #{param1} ||'%' ORDER BY bname ASC  
 	</select>
 	
 	<select id="CategoriSearchlistDao" resultType="com.uragil.LMS.dto.BookDto">
-		SELECT * FROM b_book WHERE bcategori LIKE '%'|| #{param1} ||'%' ORDER BY bcategori DESC  
+		SELECT * FROM b_book WHERE bcategori LIKE '%'|| #{param1} ||'%' ORDER BY bcategori ASC  
 	</select>
 	
 	<select id="WriterSearchlistDao" resultType="com.uragil.LMS.dto.BookDto">
-		SELECT * FROM b_book WHERE bwriter LIKE '%'|| #{param1} ||'%' ORDER BY bname DESC  
+		SELECT * FROM b_book WHERE bwriter LIKE '%'|| #{param1} ||'%' ORDER BY bwriter ASC  
 	</select>
 
 	<insert id="b_inputDao">

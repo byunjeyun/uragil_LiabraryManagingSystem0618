@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +12,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/member.css?after">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/header.css?after">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/board.css?after">
+<link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/aside.css?after">
 <title>Insert title here</title>
 </head>
 
@@ -18,7 +21,8 @@
 <%@ include file="include/header.jsp" %>
 <h2 align="center">Uragil 도서 관리시스템 웹에 방문해 주셔서 감사합니다.</h2> <br>
 
-<center>	
+
+<center>
 		<table width="600" border="0" cellspacing="0" cellpadding="10">
 		<tr height="450">
 			<td style="background-image:url('${pageContext.request.contextPath }/resources/img/open-book.jpg'); " align="center" height="400" >
@@ -35,6 +39,7 @@
 					
 					
 		<form action="loginOk" method="post">
+		
 			<table bgcolor="#210" height="120" width="300" cellspacing="10px">
 			
 		
@@ -79,8 +84,51 @@
 				</td>
 				</tr>
 			</table>
+			
 		</form>
-	
+		
+		
+		<aside>
+		<div  style="float: left; width: 280px;margin-left:5px; margin-top:5px">
+			<table width="280px" bgcolor="#432" color="blue">
+		      <ul>
+		      <tr class="board01">
+			    <th>신규 도서</th>
+			  </tr>
+			 <tr class="board02">
+			    <td>${book01.bname}</td>
+			    
+			  </tr>
+			  <tr class="board02">
+			    <td>${book02.bname}</td>
+			  </tr>
+			  <tr class="board02">
+			    <td>${book03.bname}</td>
+			  </tr>
+		    </ul>
+			</table>
+		</div>
+		
+		<div  style="float: right; width: 280px; margin-right:5px; margin-top:5px">
+			<table width="280px" bgcolor="darkgreen">
+			    <ul>
+			      <tr class="board02">
+			    <th >인기 도서</th>
+			  </tr>
+			  <tr class="board01">
+			    <td>${book01.bname}</td>
+			    
+			  </tr>
+			  <tr class="board01">
+			    <td>${book02.bname}</td>
+			  </tr>
+			 <tr class="board01">
+			    <td>${book03.bname}</td>
+			  </tr>
+			    </ul>
+			</table>
+		</div>
+		</aside>
 	</center>
 	<%@ include file="include/footer.jsp" %>
 </body>
